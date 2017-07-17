@@ -38,6 +38,9 @@ html, body {
     top: 330px;
     display: none;
     left: 70px; }
+    @media (max-width: 425px) {
+      #intro #intro-wow {
+        left: 99px; } }
   #intro #intro-big {
     top: 100px;
     left: 180px;
@@ -46,6 +49,15 @@ html, body {
     font-size: 13px;
     padding: 10px 20px;
     color: white; }
+    @media (max-width: 1024px) {
+      #intro #intro-big {
+        top: 80px; } }
+    @media (max-width: 425px) {
+      #intro #intro-big {
+        left: 2px; } }
+    @media (max-width: 425px) {
+      #intro #intro-big {
+        top: 50px; } }
     #intro #intro-big .color-xanh {
       color: #03e4e7; }
     #intro #intro-big .color-do {
@@ -64,8 +76,24 @@ html, body {
   position: relative; }
   #eat .moddle {
     position: absolute;
-    top: 130px;
+    top: 240px;
     right: 150px; }
+    @media (max-width: 1024px) {
+      #eat .moddle {
+        right: 100px; } }
+    @media (max-width: 768px) {
+      #eat .moddle {
+        right: 60px;
+        top: 200px; } }
+    @media (max-width: 425px) {
+      #eat .moddle {
+        right: 20px; } }
+    @media (max-width: 375px) {
+      #eat .moddle {
+        right: 40px; } }
+    @media (max-width: 325px) {
+      #eat .moddle {
+        right: 13px; } }
   #eat .content-eat {
     border-radius: 50%;
     background: #c94c4c;
@@ -75,19 +103,34 @@ html, body {
     -webkit-box-shadow: 0 20px 24px 0 rgba(0, 0, 0, 0.12), 0 29px 33px 0 rgba(0, 0, 0, 0.12);
     box-shadow: 0 20px 24px 0 rgba(0, 0, 0, 0.12), 0 29px 33px 0 rgba(0, 0, 0, 0.12);
     color: white;
-    text-align: center;
-    height: 260px;
-    width: 300px; }
+    text-align: center; }
     #eat .content-eat h2 {
       font-size: 35px;
       font-weight: bold; }
-    #eat .content-eat p {
-      font-size: 18px; }
+    @media (max-width: 768px) {
+      #eat .content-eat {
+        height: 200px;
+        width: 200px;
+        border: 10px solid white; } }
+    @media (max-width: 325px) {
+      #eat .content-eat {
+        height: 162px;
+        width: 162px; } }
   #eat .eat-one, #eat .eat-three {
     border-radius: 5px; }
     #eat .eat-one h2, #eat .eat-three h2 {
       font-size: 45px;
-      line-height: 1.8; }
+      line-height: 1.8;
+      margin-top: 40px; }
+      @media (max-width: 768px) {
+        #eat .eat-one h2, #eat .eat-three h2 {
+          font-size: 28px;
+          line-height: 2.4;
+          margin-top: 26px; } }
+      @media (max-width: 325px) {
+        #eat .eat-one h2, #eat .eat-three h2 {
+          font-size: 20px;
+          line-height: 2.3; } }
   #eat .eat-one {
     margin-top: 100px; }
   #eat .eat-two {
@@ -98,19 +141,28 @@ html, body {
     #eat .eat-two h2 {
       font-size: 20px;
       line-height: 2.7; }
+    @media (max-width: 768px) {
+      #eat .eat-two {
+        margin-left: 110px; } }
+    @media (max-width: 425px) {
+      #eat .eat-two {
+        margin-left: 150px; } }
+    @media (max-width: 325px) {
+      #eat .eat-two {
+        margin-left: 108px; } }
   #eat .eat-three {
     margin-top: 30px;
     margin-bottom: 100px; }
 
 #work {
-  background: #eea29a;
-  height: 768px; }
+  background: #eea29a; }
   #work .content-work {
     margin-top: 80px; }
-  #work .work-margin1 {
-    margin-top: -300px; }
   #work .work-margin2 {
-    margin-top: 80px; }
+    margin-top: 80px;
+    margin-bottom: 80px; }
+  #work .center {
+    text-align: center; }
 
 #flight {
   background-image: url("../img/nen-xanh.jpg");
@@ -121,6 +173,18 @@ html, body {
     position: absolute;
     top: 0px;
     right: 200px; }
+    @media (max-width: 1024px) {
+      #flight .umberla {
+        right: 110px; } }
+    @media (max-width: 768px) {
+      #flight .umberla {
+        right: 70px; } }
+    @media (max-width: 375px) {
+      #flight .umberla {
+        right: 50px; } }
+    @media (max-width: 325px) {
+      #flight .umberla {
+        right: 22px; } }
   #flight .content-flight {
     border-radius: 50%;
     background: none;
@@ -138,8 +202,12 @@ html, body {
     #flight .content-flight h2 {
       font-size: 35px;
       font-weight: bold; }
-    #flight .content-flight p {
-      font-size: 18px; }
+    @media (max-width: 375px) {
+      #flight .content-flight {
+        margin-left: 35px; } }
+    @media (max-width: 325px) {
+      #flight .content-flight {
+        margin-left: 10px; } }
   #flight .f-two {
     margin-top: 50px; }
   #flight .f-three {
@@ -218,8 +286,14 @@ html, body {
   #ocean .ong-hut {
     position: absolute;
     z-index: 1000000;
-    top: -300px;
+    bottom: 0px;
     left: 200px; }
+    @media (max-width: 375px) {
+      #ocean .ong-hut {
+        left: 80px; } }
+    @media (max-width: 325px) {
+      #ocean .ong-hut {
+        left: 54px; } }
 
 @keyframes flight {
   from {

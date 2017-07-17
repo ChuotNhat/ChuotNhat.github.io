@@ -10,6 +10,7 @@ $(document).ready(function(){
 		}
 	)
 	wow.init();
+
 	$(window).bind('scroll', function(){
 		var x = $(window).scrollTop();
 		$("#bind").text(x);
@@ -18,13 +19,13 @@ $(document).ready(function(){
 			$("#intro-small").css("display","block");
 		}
 		if(x>=1365) {
-			$(".content-work img").attr("src", "img/work2.png");
+			$(".changeimg img").attr("src", "img/work2.png");
 		}
 		else {
-			$(".content-work img").attr("src", "img/work1.png");
+			$(".changeimg img").attr("src", "img/work1.png");
 		}
 		if(x>1600) {
-			$(".content-work img").attr("src", "img/work3.png");
+			$(".changeimg img").attr("src", "img/work3.png");
 		}
 		if(x>=2301) {
 			$(".umberla").css("position", "fixed");
@@ -42,9 +43,34 @@ $(document).ready(function(){
 			$(".full-song").css("background-position", (x-3948)/4+"px 0px"  );
 			$(".full-song1").css("background-position", (3948-x)/4+"px 0px"  );
 		}
-		if(x> 4000) {
-			$(".ong-hut").css("top", -300 + 1.06*x-4000 + "px");
-		}
 	});
+	// var hintro = $("#intro").outerHeight(true);
+	// var heat = $("#eat").outerHeight(true);
+	// var hwork = $("#work").outerHeight(true);
+	// var hflight = $("#flight").outerHeight(true);
+	// var hsea = $("#sea").outerHeight(true);
+	// var hsea1 = $("#sea1").outerHeight(true);
+	// var tong = hintro + heat + hwork;
 
+	var width = $("#flight").outerWidth(true);
+	if(width<=400) {
+		$(".moddle img").attr("src", "img/my-tom-300.png"); 
+	}
+	else {
+		$(".moddle img").attr("src", "img/my-tom-300.png"); 
+	}
+	if(width<=770) {
+		$(".moddle img").attr("src", "img/my-tom-400.png");
+		$(".umberla img").attr("src","img/meo-bay-len-280.png");
+	}
+	else {
+		$(".moddle img").attr("src", "img/my-tom.png");
+		$(".umberla img").attr("src","img/meo-bay-len-350.png");
+	}
+	if(width<=1024) {
+		$(".umberla img").attr("src", "img/meo-bay-len-350.png");
+	}
+	else {
+		$(".umberla img").attr("src", "img/meo-bay-len-450.png");
+	}
 });

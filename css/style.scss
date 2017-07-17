@@ -22,9 +22,6 @@ html, body {
 		font-size: 35px;
 		font-weight: bold;
 	}
-	p {
-		font-size: 18px;
-	}
 }
 @mixin fish2($x, $y){
 	position:absolute;
@@ -68,6 +65,9 @@ html, body {
 	    top: 330px;
 	    display: none;
 	    left: 70px;
+	    @media (max-width: 425px) {
+	    	left:99px;
+	    }
 	}
 	#intro-big {
 	    top: 100px;
@@ -77,6 +77,15 @@ html, body {
 	    font-size: 13px;
 	    padding:10px 20px;
 	    color: white;
+	    @media (max-width: 1024px) {
+	    	top: 80px;
+	    }
+	    @media (max-width: 425px) {
+	    	left:2px;
+	    }
+	    @media (max-width: 425px) {
+	    	top:50px;
+	    }
 	    .color-xanh {
 			color :#03e4e7;
 	    }
@@ -99,23 +108,55 @@ html, body {
 }
 #eat {
 	background :#b1cbbb;
-	// height:768px;
 	position:relative;
 	.moddle {
 		position:absolute;
-		top:130px;
+		top:240px;
 		right:150px;
+		@media (max-width: 1024px) {
+	    	right:100px;
+	    }
+	    @media (max-width: 768px) {
+	    	right:60px;
+	    	top:200px;
+	    }
+	    @media (max-width: 425px) {
+	    	right:20px;
+	    }
+	    @media (max-width: 375px) {
+	    	right:40px;
+	    }
+	    @media (max-width: 325px) {
+	    	right:13px;
+	    }
 	}
 	.content-eat {
 		@include hinh-tron(#c94c4c, white);
-		height: 260px;
-		width: 300px;
+		@media (max-width: 768px) {
+	    	height: 200px;
+	    	width: 200px;
+			border: 10px solid white;
+	    }
+	    @media (max-width: 325px) {
+	    	height: 162px;
+	    	width: 162px;
+	    }
 	}
 	.eat-one, .eat-three {
 		border-radius:5px;
 		h2 {
 			font-size: 45px;
     		line-height: 1.8;
+    		margin-top: 40px;
+    		@media (max-width: 768px) {
+		    	font-size: 28px;
+    			line-height: 2.4;
+    			margin-top: 26px;
+		    }
+		    @media (max-width: 325px) {
+		    	font-size: 20px;
+    			line-height: 2.3;
+		    }
     	}	
 	}
 	.eat-one {
@@ -130,6 +171,15 @@ html, body {
 			font-size: 20px;
     		line-height: 2.7;
 		}
+		@media (max-width: 768px) {
+	    	margin-left: 110px;
+	    }
+	    @media (max-width: 425px) {;
+		    margin-left: 150px;
+	    }
+	    @media (max-width: 325px) {;
+		    margin-left: 108px;
+	    }
 	}
 	.eat-three {
 		margin-top: 30px;
@@ -138,15 +188,16 @@ html, body {
 }
 #work {
 	background: #eea29a;
-	height:768px;
+	// height:768px;
 	.content-work {
 		margin-top: 80px;
 	}
-	.work-margin1 {
-		margin-top: -300px;
-	}
 	.work-margin2 {
 		margin-top: 80px;
+		margin-bottom: 80px;
+	}
+	.center {
+		text-align: center;
 	}
 }
 
@@ -159,6 +210,18 @@ html, body {
 		position:absolute;
 		top: 0px;
 		right: 200px;
+		@media (max-width: 1024px) {
+	    	right:110px;
+	    }
+	    @media (max-width: 768px) {
+	    	right:70px;
+	    }
+	    @media (max-width: 375px) {
+	    	right:50px;
+	    }
+	    @media (max-width: 325px) {
+	    	right:22px;
+	    }
 	}
 	.content-flight {
 		@include hinh-tron(none, none);
@@ -166,6 +229,12 @@ html, body {
 		margin-bottom: 50px;
 		border-radius: 0px;
 		height: 280px;
+		@media (max-width: 375px) {
+	    	margin-left: 35px;
+	    }
+	    @media (max-width: 325px) {
+	    	margin-left: 10px;
+	    }
 	}
 	.f-two {
 		margin-top: 50px;
@@ -235,8 +304,14 @@ html, body {
 	.ong-hut {
 		position:absolute;
 		z-index: 1000000;
-		top:-300px;
+		bottom:0px;
 		left: 200px;
+		@media (max-width: 375px) {
+	    	left: 80px;
+	    }
+	    @media (max-width: 325px) {
+	    	left: 54px;
+	    }
 	}
 }
 @keyframes flight {
