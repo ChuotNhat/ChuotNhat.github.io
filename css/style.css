@@ -320,14 +320,5 @@ html, body {
     right: -100px; }
   to {
     right: 1370px; } }
-#bind {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  width: 50px;
-  height: 50px;
-  z-index: 10000;
-  border: 1px solid blue;
-  font-size: 20px; }
 
 /*# sourceMappingURL=style.css.map */
