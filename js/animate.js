@@ -1,10 +1,10 @@
 $(document).ready(function(){
-	window.onload = function(e){ 
-	    var x = document.getElementById("box-load");
-	    x.style.display = 'none';
-		var y = document.getElementById("box-content");
-	    y.style.display = 'block';
-	}
+	// window.onload = function(e){ 
+	//     var x = document.getElementById("box-load");
+	//     x.style.display = 'none';
+	// 	var y = document.getElementById("box-content");
+	//     y.style.display = 'block';
+	// }
 	wow = new WOW(
 		{
 			boxClass:     'wow',      // default
