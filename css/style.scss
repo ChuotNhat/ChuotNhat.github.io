@@ -37,7 +37,7 @@ html, body {
 }
 #intro {
 	background-image:url("../img/ss4.png");
-	height:768px;
+	height:673px;
 	position:relative;
 	#mouse-run-ngang {
 		position: absolute;
@@ -51,7 +51,7 @@ html, body {
 	    border: 15px solid white;
 	}
 	#intro-small {
-		top:600px;
+		top:500px;
 		background:black;
 		color:white;
 		text-align: center;
@@ -65,12 +65,12 @@ html, body {
 	}
 	#intro-wow {
 		position: absolute;
-	    top: 400px;
+	    top: 330px;
 	    display: none;
 	    left: 70px;
 	}
 	#intro-big {
-	    top: 140px;
+	    top: 100px;
 	    left: 180px;
 	    background: #231f1f;
 	    border-radius: 0px;
@@ -261,15 +261,6 @@ html, body {
     from  {right:-100px;}
     to {right:1370px; }
 }
-// @keyframes wave-tp {
-//     from  {background-position: 30% 0%}
-//     to {background-position: 40% 0%}
-// }
-// @keyframes wave-pt {
-//     from  {background-position: 40% 0%}
-//     to {background-position: 30% 0%}
-// }
-
 #bind {
 	position:fixed;
 	top:20px;

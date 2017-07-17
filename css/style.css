@@ -11,7 +11,7 @@ html, body {
 
 #intro {
   background-image: url("../img/ss4.png");
-  height: 768px;
+  height: 673px;
   position: relative; }
   #intro #mouse-run-ngang {
     position: absolute;
@@ -23,7 +23,7 @@ html, body {
     border-radius: 50%;
     border: 15px solid white; }
   #intro #intro-small {
-    top: 600px;
+    top: 500px;
     background: black;
     color: white;
     text-align: center;
@@ -35,11 +35,11 @@ html, body {
       line-height: 70px; }
   #intro #intro-wow {
     position: absolute;
-    top: 400px;
+    top: 330px;
     display: none;
     left: 70px; }
   #intro #intro-big {
-    top: 140px;
+    top: 100px;
     left: 180px;
     background: #231f1f;
     border-radius: 0px;

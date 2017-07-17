@@ -1,10 +1,4 @@
 $(document).ready(function(){
-	// window.onload = function(e){ 
-	//     var x = document.getElementById("box-load");
-	//     x.style.display = 'none';
-	// 	var y = document.getElementById("box-content");
-	//     y.style.display = 'block';
-	// }
 	wow = new WOW(
 		{
 			boxClass:     'wow',      // default
@@ -48,8 +42,8 @@ $(document).ready(function(){
 			$(".full-song").css("background-position", (x-3948)/4+"px 0px"  );
 			$(".full-song1").css("background-position", (3948-x)/4+"px 0px"  );
 		}
-		if(x> 4220) {
-			$(".ong-hut").css("top", -300 + 1.06*x-4220 + "px");
+		if(x> 4000) {
+			$(".ong-hut").css("top", -300 + 1.06*x-4000 + "px");
 		}
 	});
 
