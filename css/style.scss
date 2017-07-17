@@ -1,0 +1,277 @@
+body {
+	padding:0;
+	margin:0;	
+}
+@mixin hinh-tron($x, $y) {
+	border-radius: 50%;
+    background: $x;
+    border: 21px solid $y;
+    width: 300px;
+    height: 300px;
+    -webkit-box-shadow: 0 20px 24px 0 rgba(0, 0, 0, 0.12), 0 29px 33px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 20px 24px 0 rgba(0, 0, 0, 0.12), 0 29px 33px 0 rgba(0, 0, 0, 0.12);
+    color:white;
+    text-align: center;
+    h2 {
+		font-size: 35px;
+		font-weight: bold;
+	}
+	p {
+		font-size: 18px;
+	}
+}
+@mixin fish2($x, $y){
+	position:absolute;
+	top:$x;
+	-webkit-animation: $y; 
+    animation: $y;
+}
+#intro, #eat, #work, #flight, #sea,#sea1,#ocean  {
+	overflow:hidden;
+}
+#intro {
+	background-image:url("../img/ss4.png");
+	height:768px;
+	position:relative;
+	#mouse-run-ngang {
+		position: absolute;
+	    top: 30px;
+	   -webkit-animation: flight 30s linear infinite;
+	   animation: flight 30s linear infinite;
+	}
+	#intro-small, #intro-wow, #intro-big {
+		position:absolute;
+		border-radius: 50%;
+	    border: 15px solid white;
+	}
+	#intro-small {
+		top:600px;
+		background:black;
+		color:white;
+		text-align: center;
+		padding : 0px 5px;
+		display: none;
+		span {
+			font-weight: bold;
+			font-size:19px;
+			line-height: 70px;
+		}
+	}
+	#intro-wow {
+		position: absolute;
+	    top: 400px;
+	    display: none;
+	    left: 70px;
+	}
+	#intro-big {
+	    top: 140px;
+	    left: 180px;
+	    background: #231f1f;
+	    border-radius: 0px;
+	    font-size: 13px;
+	    padding:10px 20px;
+	    color: white;
+	    .color-xanh {
+			color :#03e4e7;
+	    }
+	    .color-do {
+			color: #e70354;
+	    }
+	    .color-vang {
+			color: #fbc403;
+	    }
+	    .color-cay {
+	    	color: #7fe703;
+	    }
+	    .lui-dong {
+	    	text-indent: 20px;
+	    }
+	    .lui-dong2 {
+	    	text-indent: 40px;
+	    }
+	}
+}
+#eat {
+	background :#b1cbbb;
+	// height:768px;
+	position:relative;
+	.moddle {
+		position:absolute;
+		top:130px;
+		right:150px;
+	}
+	.content-eat {
+		@include hinh-tron(#c94c4c, white);
+		height: 260px;
+		width: 300px;
+	}
+	.eat-one, .eat-three {
+		border-radius:5px;
+		h2 {
+			font-size: 45px;
+    		line-height: 1.8;
+    	}	
+	}
+	.eat-one {
+		margin-top: 100px;
+	}
+	.eat-two {
+		margin-top: 30px;
+		height: 100px;
+		width: 100px;
+		border: 4px solid white;
+		h2 {
+			font-size: 20px;
+    		line-height: 2.7;
+		}
+	}
+	.eat-three {
+		margin-top: 30px;
+		margin-bottom: 100px;
+	}
+}
+#work {
+	background: #eea29a;
+	height:768px;
+	.content-work {
+		margin-top: 80px;
+	}
+	.work-margin1 {
+		margin-top: -300px;
+	}
+	.work-margin2 {
+		margin-top: 80px;
+	}
+}
+
+#flight {
+	background-image: url("../img/nen-xanh.jpg");
+	position:relative;
+	border-bottom: 20px solid white;
+	border-top: 20px solid #f3f3f3;
+	.umberla {
+		position:absolute;
+		top: 0px;
+		right: 200px;
+	}
+	.content-flight {
+		@include hinh-tron(none, none);
+		margin-top: 100px;
+		margin-bottom: 50px;
+		border-radius: 0px;
+		height: 280px;
+	}
+	.f-two {
+		margin-top: 50px;
+	}
+	.f-three {
+		margin-bottom: 145px;
+	}
+}
+#sea {
+	background-image: url("../img/nen-sea-wave.jpg");
+	height:150px;
+	position:relative;
+}
+#sea1 {
+	background-image: url("../img/wave-bac-re.png");
+	height:700px;
+	position:relative;
+	background-repeat: repeat;
+	.full-song, .full-song1 {
+		position:absolute;
+		bottom:50px;
+		left:0px;
+		right:0px;
+		background-image:url(../img/wave-re.png);
+		height: 287px;
+		
+	}
+	.full-song {
+		z-index: 2;
+	}
+	.full-song1 {
+		bottom:-40px;
+		z-index: 4;
+	}
+	.sea-fish1 {
+    	@include fish2(328px, myfirst 25s ease-in infinite);
+    	z-index: 3;
+	}
+	.sea-fish2 {
+    	@include fish2(350px, mysecond 45s ease infinite);
+    	z-index: 3;
+	}
+	.sea-fish3 {
+    	@include fish2(308px, mysecond 30s ease-out infinite);
+    	z-index: 3;
+	}
+}
+#ocean {
+	background-image: url("../img/dai-duong-nho.png");
+	height:620px;
+	position:relative;
+	.fish1 {
+	 	@include fish2(450px, mysecond 50s ease-in-out infinite);
+	}
+	.fish2 {
+	 	@include fish2(200px, mysecond 75s ease-out infinite);
+	}
+	.fish0 {
+		@include fish2(300px, myfirst 60s linear infinite);
+	}
+	.fish4 {
+		@include fish2(260px, myfirst 60s ease-in infinite);
+	}
+	.fish5 {
+		@include fish2(100px, myfirst 90s ease infinite);
+	}
+	.ong-hut {
+		position:absolute;
+		z-index: 1000000;
+		top:-300px;
+		left: 200px;
+	}
+}
+@keyframes flight {
+    from  {right:0px;}
+    to {right:1370px; }
+}
+@-webkit-keyframes myfirst {
+    from  {left:-100px;}
+    to {left:1370px; }
+}
+
+@keyframes myfirst {
+    from  {left:-100px;}
+    to {left:1370px; }
+}
+@-webkit-keyframes mysecond {
+    from  {right:-90px;}
+    to {right:1370px; }
+}
+
+@keyframes mysecond {
+    from  {right:-100px;}
+    to {right:1370px; }
+}
+// @keyframes wave-tp {
+//     from  {background-position: 30% 0%}
+//     to {background-position: 40% 0%}
+// }
+// @keyframes wave-pt {
+//     from  {background-position: 40% 0%}
+//     to {background-position: 30% 0%}
+// }
+
+#bind {
+	position:fixed;
+	top:20px;
+	right:20px;
+	width:50px;
+	height:50px;
+	z-index:10000;
+	border:1px solid blue;
+	font-size:20px;
+
+}
