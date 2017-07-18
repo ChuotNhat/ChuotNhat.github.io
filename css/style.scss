@@ -188,7 +188,6 @@ html, body {
 }
 #work {
 	background: #eea29a;
-	// height:768px;
 	.content-work {
 		margin-top: 80px;
 	}
@@ -216,10 +215,13 @@ html, body {
 	    @media (max-width: 768px) {
 	    	right:70px;
 	    }
-	    @media (max-width: 375px) {
-	    	right:50px;
+	    @media (max-width: 425px) {
+	    	right:40px;
 	    }
-	    @media (max-width: 325px) {
+	    @media (max-width: 375px) {
+	    	right:13px;
+	    }
+	     @media (max-width: 325px) {
 	    	right:22px;
 	    }
 	}
@@ -229,6 +231,9 @@ html, body {
 		margin-bottom: 50px;
 		border-radius: 0px;
 		height: 280px;
+		@media (max-width: 425px) {
+	    	margin-left: 60px;
+	    }
 		@media (max-width: 375px) {
 	    	margin-left: 35px;
 	    }

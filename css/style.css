@@ -179,9 +179,12 @@ html, body {
     @media (max-width: 768px) {
       #flight .umberla {
         right: 70px; } }
+    @media (max-width: 425px) {
+      #flight .umberla {
+        right: 40px; } }
     @media (max-width: 375px) {
       #flight .umberla {
-        right: 50px; } }
+        right: 13px; } }
     @media (max-width: 325px) {
       #flight .umberla {
         right: 22px; } }
@@ -202,6 +205,9 @@ html, body {
     #flight .content-flight h2 {
       font-size: 35px;
       font-weight: bold; }
+    @media (max-width: 425px) {
+      #flight .content-flight {
+        margin-left: 60px; } }
     @media (max-width: 375px) {
       #flight .content-flight {
         margin-left: 35px; } }
@@ -320,5 +326,14 @@ html, body {
     right: -100px; }
   to {
     right: 1370px; } }
+#bind {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  z-index: 10000;
+  border: 1px solid blue;
+  font-size: 20px; }
 
 /*# sourceMappingURL=style.css.map */

@@ -10,10 +10,18 @@ $(document).ready(function(){
 		}
 	)
 	wow.init();
+	var width = $("#flight").outerWidth(true);
 
 	$(window).bind('scroll', function(){
 		var x = $(window).scrollTop();
 		$("#bind").text(x);
+		var hintro = $("#intro").outerHeight(true);
+		var heat = $("#eat").outerHeight(true);
+		var hwork = $("#work").outerHeight(true);
+		var hflight = $("#flight").outerHeight(true);
+		var tong3 = hintro + heat + hwork;
+		var tong4 = tong3 + hflight;
+
 		if(x>=100) {
 			$("#intro-wow").css("display","block");
 			$("#intro-small").css("display","block");
@@ -27,50 +35,42 @@ $(document).ready(function(){
 		if(x>1600) {
 			$(".changeimg img").attr("src", "img/work3.png");
 		}
-		if(x>=2301) {
+		if(x>=tong3) {
 			$(".umberla").css("position", "fixed");
 		}
 		else {
 			$(".umberla").css("position", "absolute");
 		}
-		if(x>=3513) {
+		if(x>=tong4) {
 			$(".umberla").css("display", "none");
 		}
 		else {
 			$(".umberla").css("display", "block");
 		}
-		if(x>3800) {
-			$(".full-song").css("background-position", (x-3948)/4+"px 0px"  );
-			$(".full-song1").css("background-position", (3948-x)/4+"px 0px"  );
+		if(x>tong4) {
+			$(".full-song").css("background-position", (x-tong4)/4+"px 0px"  );
+			$(".full-song1").css("background-position", (tong4-x)/4+"px 0px"  );
 		}
 	});
-	// var hintro = $("#intro").outerHeight(true);
-	// var heat = $("#eat").outerHeight(true);
-	// var hwork = $("#work").outerHeight(true);
-	// var hflight = $("#flight").outerHeight(true);
-	// var hsea = $("#sea").outerHeight(true);
-	// var hsea1 = $("#sea1").outerHeight(true);
-	// var tong = hintro + heat + hwork;
 
-	var width = $("#flight").outerWidth(true);
-	if(width<=400) {
-		$(".moddle img").attr("src", "img/my-tom-300.png"); 
-	}
-	else {
-		$(".moddle img").attr("src", "img/my-tom-300.png"); 
-	}
-	if(width<=770) {
-		$(".moddle img").attr("src", "img/my-tom-400.png");
-		$(".umberla img").attr("src","img/meo-bay-len-280.png");
-	}
-	else {
-		$(".moddle img").attr("src", "img/my-tom.png");
-		$(".umberla img").attr("src","img/meo-bay-len-350.png");
-	}
-	if(width<=1024) {
-		$(".umberla img").attr("src", "img/meo-bay-len-350.png");
-	}
-	else {
-		$(".umberla img").attr("src", "img/meo-bay-len-450.png");
-	}
+// Resize screen - change image
+    $(window).resize(function() {
+    	var widthwin = $(window).width();
+        if(widthwin<=1024) {
+			$(".umberla img").attr("src", "img/meo-bay-len-350.png");
+		}
+		else {
+			$(".umberla img").attr("src", "img/meo-bay-len-450.png");
+		}
+		if(widthwin<=770) {
+			$(".moddle img").attr("src", "img/my-tom-400.png");
+		}
+		if(widthwin<=375) {
+			$(".moddle img").attr("src", "img/my-tom-300.png"); 
+		}
+		if(widthwin<=325) {
+			$(".umberla img").attr("src", "img/meo-bay-len-280.png"); 
+		}
+    });
+	
 });
