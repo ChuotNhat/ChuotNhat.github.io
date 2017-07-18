@@ -65,6 +65,9 @@ $(document).ready(function(){
 		if(widthwin<=770) {
 			$(".moddle img").attr("src", "img/my-tom-400.png");
 		}
+		else {
+			$(".moddle img").attr("src", "img/my-tom.png");
+		}
 		if(widthwin<=375) {
 			$(".moddle img").attr("src", "img/my-tom-300.png"); 
 		}
