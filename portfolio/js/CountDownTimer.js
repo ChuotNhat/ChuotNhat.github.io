@@ -7,7 +7,7 @@ $(document).ready(function(){
 		}
 		else {
 			$("navbar.navbar-backg").css("background","none");
-			$(".nav li a").css("color","#000080");
+			$(".nav li a").css("color","white");
 		}
 		if(x>800) {
 			$(".scrolltop").css("display","block");

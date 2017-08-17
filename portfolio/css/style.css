@@ -5,7 +5,6 @@ body {
     text-decoration: none; }
 
 #intro, #about, #services, #contact, #graduate, #blog {
-  height: 100%;
   padding-top: 80px; }
 
 #about, #services, #contact, #graduate, #blog {
@@ -16,187 +15,156 @@ body {
   color: white; }
 
 navbar a {
-  color: #000080;
+  color: white;
   margin: 0px 10px;
   font-weight: bold; }
   navbar a:hover, navbar a:active, navbar a:focus {
-    border-radius: 20px;
-    color: white;
-    background: #ffbb33; }
+    background: #ffbb33;
+    color: white; }
 navbar .navbar-brand img {
   width: 80px;
   height: 80px;
   border: 2px solid;
   margin-left: 72px; }
 
+@media (max-width: 1024px) {
+  .navbar-right {
+    width: 84%; } }
+@media (max-width: 768px) {
+  .navbar-right {
+    width: 100%; } }
 #intro {
-  height: 97%;
+  height: 100vh;
   overflow: hidden;
-  background-image: url("../img/tran-huong-frontend.jpg");
+  background-image: url("../img/background-tran-thi-huong.png");
   background-repeat: repeat;
-  display: -webkit-flex;
-  display: flex;
-  justify-content: space-between;
-  align-items: center; }
+  text-align: center; }
   @media (max-width: 1024px) {
     #intro {
-      background-image: url("../img/huong-tran-frontend.png"); } }
+      background-image: url("../img/background-tran-thi-huong-1024.png"); } }
   @media (max-width: 768px) {
     #intro {
-      background-image: url("../img/front-end_tran-huong.png");
-      height: 83%; } }
+      height: 89%; } }
   @media (max-width: 425px) {
     #intro {
-      background-image: url("../img/hinh-nen.png");
+      background-image: url("../img//background-tran-thi-huong-425.png");
       flex-direction: column;
-      height: 77%; } }
-  @media (max-width: 375px) {
-    #intro {
-      background-image: url("../img/hinh-nen-350.png");
-      height: 68%; } }
-  #intro .intro-me, #intro .icon-social {
-    margin-top: -90px; }
-  #intro .intro-me {
-    margin-left: 66px;
-    font-size: 44px;
-    text-transform: uppercase;
-    color: crimson;
-    font-weight: bold; }
+      height: 75%; } }
+  #intro:hover .hinh-small {
+    top: 260px;
+    opacity: 1; }
     @media (max-width: 1024px) {
-      #intro .intro-me {
-        margin-top: 0px; } }
+      #intro:hover .hinh-small {
+        top: 180px; } }
+  #intro:hover .loi-chao {
+    top: 120px;
+    opacity: 1; }
+    @media (max-width: 1024px) {
+      #intro:hover .loi-chao {
+        top: 20px; } }
+  #intro .hinh-small {
+    position: absolute;
+    top: 0px;
+    left: 30%;
+    opacity: 0;
+    transition: 2s; }
+    #intro .hinh-small img {
+      border-radius: 50%;
+      border: 10px solid white; }
+    @media (max-width: 1024px) {
+      #intro .hinh-small {
+        left: 10%; } }
+  #intro .loi-chao {
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    color: white;
+    font-size: 25px;
+    padding: 60px 20px;
+    background: #ffbb33;
+    border-radius: 50% 0%;
+    transition: 2s; }
+    @media (max-width: 1024px) {
+      #intro .loi-chao {
+        left: -15%; } }
     @media (max-width: 768px) {
-      #intro .intro-me {
-        margin-top: -65px;
-        margin-left: 45px;
-        font-size: 35px; } }
+      #intro .loi-chao {
+        left: 15%; } }
     @media (max-width: 425px) {
-      #intro .intro-me {
-        font-size: 28px;
-        margin-top: 0px;
-        margin-left: -110px; } }
-    @media (max-width: 425px) {
-      #intro .intro-me {
-        margin-top: -18px;
-        margin-left: -25px; } }
-  #intro .icon-social {
-    margin-right: 66px; }
-    @media (max-width: 1024px) {
-      #intro .icon-social {
-        display: none; } }
-    @media (max-width: 425px) {
-      #intro .icon-social {
-        display: block;
-        margin-right: 0px; } }
-    #intro .icon-social i {
-      font-size: 50px;
-      padding: 10px; }
-      @media (max-width: 425px) {
-        #intro .icon-social i {
-          font-size: 32px; } }
-    #intro .icon-social .color-f {
-      color: #2962ff; }
-      #intro .icon-social .color-f:hover {
-        color: #1C2331; }
-    #intro .icon-social .color-linked {
-      color: #ff1744; }
-      #intro .icon-social .color-linked:hover {
-        color: #2BBBAD; }
-    #intro .icon-social .color-instagram {
-      color: #ff6d00; }
-      #intro .icon-social .color-instagram:hover {
-        color: #ffbb33; }
-    #intro .icon-social .color-skype {
-      color: #01579b; }
-      #intro .icon-social .color-skype:hover {
-        color: #4285F4; }
+      #intro .loi-chao {
+        left: 0%; } }
 
-#about {
-  height: 120%; }
-  @media (max-width: 1024px) {
-    #about {
-      height: 230%; } }
-  @media (max-width: 425px) {
-    #about {
-      height: 237%; } }
-  #about .h1-bottom {
-    margin-bottom: 20px; }
-    #about .h1-bottom h1 {
+#about .h1-bottom {
+  margin-bottom: 20px; }
+  #about .h1-bottom h1 {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #FF8800;
+    border-bottom: 5px solid #FF8800; }
+    #about .h1-bottom h1.span-hover {
+      display: inline-block; }
+    #about .h1-bottom h1.span-hover:after {
+      content: '';
+      display: block;
+      height: 5px;
+      width: 0;
+      background: transparent;
+      transition: width .5s ease, background-color .5s ease; }
+    #about .h1-bottom h1.span-hover:hover:after {
+      width: 100%;
+      background: #FF8800; }
+#about .experience {
+  box-shadow: 7px 7px 30px 0 rgba(0, 0, 0, 0.4);
+  height: 250px;
+  margin-bottom: 30px; }
+  #about .experience .content-exprience {
+    margin-top: 20px; }
+    #about .experience .content-exprience .span-color-1 {
+      padding: 5px 20px;
+      margin: 5px;
+      background: #FF8800;
+      color: white; }
+    #about .experience .content-exprience .span-color-2 {
+      padding: 5px 20px;
+      margin: 5px;
+      background: #ff1744;
+      color: white; }
+    #about .experience .content-exprience .span-color-3 {
+      padding: 5px 20px;
+      margin: 5px;
+      background: #3F729B;
+      color: white; }
+    #about .experience .content-exprience .span-color-4 {
+      padding: 5px 20px;
+      margin: 5px;
+      background: #0099CC;
+      color: white; }
+    #about .experience .content-exprience .info-web {
+      background: #2BBBAD;
+      padding: 10px 30px;
+      border-radius: 30px;
+      color: white;
       text-transform: uppercase;
-      font-weight: bold;
-      color: #FF8800;
-      border-bottom: 5px solid #FF8800; }
-      #about .h1-bottom h1.span-hover {
-        display: inline-block; }
-      #about .h1-bottom h1.span-hover:after {
-        content: '';
-        display: block;
-        height: 5px;
-        width: 0;
-        background: transparent;
-        transition: width .5s ease, background-color .5s ease; }
-      #about .h1-bottom h1.span-hover:hover:after {
-        width: 100%;
-        background: #FF8800; }
-  #about .experience {
-    box-shadow: 7px 7px 30px 0 rgba(0, 0, 0, 0.4);
-    height: 250px;
-    margin-bottom: 30px; }
-    #about .experience .content-exprience {
-      margin-top: 20px; }
-      #about .experience .content-exprience .span-color-1 {
-        padding: 5px 20px;
-        margin: 5px;
-        background: #FF8800;
-        color: white; }
-      #about .experience .content-exprience .span-color-2 {
-        padding: 5px 20px;
-        margin: 5px;
-        background: #ff1744;
-        color: white; }
-      #about .experience .content-exprience .span-color-3 {
-        padding: 5px 20px;
-        margin: 5px;
-        background: #3F729B;
-        color: white; }
-      #about .experience .content-exprience .span-color-4 {
-        padding: 5px 20px;
-        margin: 5px;
-        background: #0099CC;
-        color: white; }
-      #about .experience .content-exprience .info-web {
-        background: #2BBBAD;
-        padding: 10px 30px;
-        border-radius: 30px;
-        color: white;
-        text-transform: uppercase;
-        margin: 5px; }
-        #about .experience .content-exprience .info-web:hover {
-          box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15); }
-      @media (max-width: 425px) {
-        #about .experience .content-exprience .info-website {
-          padding-top: 60px;
-          padding-left: 6px; } }
-  #about .bg-1, #about .bg-2, #about .bg-3, #about .bg-4 {
-    background-repeat: no-repeat; }
-  #about .bg-1 {
-    background-image: url("../img/huong-tran-web-cake.jpg"); }
-  #about .bg-2 {
-    background-image: url("../img/huong-tran-web-dulich.jpg"); }
-  #about .bg-3 {
-    background-image: url("../img/huong-tran-web-house.jpg"); }
-  #about .bg-4 {
-    background-image: url("../img/huong-tran-webseo.jpg"); }
+      margin: 5px; }
+      #about .experience .content-exprience .info-web:hover {
+        box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15); }
+    @media (max-width: 425px) {
+      #about .experience .content-exprience .info-website {
+        padding-top: 60px;
+        padding-left: 6px; } }
+#about .bg-1, #about .bg-2, #about .bg-3, #about .bg-4 {
+  background-repeat: no-repeat; }
+#about .bg-1 {
+  background-image: url("../img/huong-tran-web-cake.jpg"); }
+#about .bg-2 {
+  background-image: url("../img/huong-tran-toi-yeu-web.jpg"); }
+#about .bg-3 {
+  background-image: url("../img/huong-tran-web-chuot.jpg"); }
+#about .bg-4 {
+  background-image: url("../img/huong-tran-webseo.jpg"); }
 
 #services {
-  height: 75%;
   background: #87CEFA; }
-  @media (max-width: 1024px) {
-    #services {
-      height: 80%; } }
-  @media (max-width: 768px) {
-    #services {
-      height: 132%; } }
   #services h1 {
     text-transform: uppercase;
     font-weight: bold;
@@ -229,18 +197,6 @@ navbar .navbar-brand img {
 
 #graduate {
   background: white; }
-  @media (max-width: 1024px) {
-    #graduate {
-      height: 110%; } }
-  @media (max-width: 768px) {
-    #graduate {
-      height: 150%; } }
-  @media (max-width: 425px) {
-    #graduate {
-      height: 204%; } }
-  @media (max-width: 325px) {
-    #graduate {
-      height: 292%; } }
   #graduate h1 {
     text-transform: uppercase;
     font-weight: bold;
@@ -302,7 +258,6 @@ navbar .navbar-brand img {
     background: #0099CC; }
 
 #contact {
-  height: 115%;
   background: #87CEFA; }
   #contact h1 {
     text-transform: uppercase;
@@ -327,15 +282,6 @@ navbar .navbar-brand img {
     @media (max-width: 768px) {
       #contact .padding-left {
         padding-left: 15px; } }
-  @media (max-width: 1024px) {
-    #contact {
-      height: 125%; } }
-  @media (max-width: 768px) {
-    #contact {
-      height: 200%; } }
-  @media (max-width: 425px) {
-    #contact {
-      height: 240%; } }
   #contact .icon {
     display: inline-block;
     padding: 0px;
@@ -482,99 +428,96 @@ navbar .navbar-brand img {
         box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
         background: #f57c00; }
 
-#blog {
-  height: 90%; }
-  #blog h1 {
-    text-transform: uppercase;
-    font-weight: bold;
-    color: black;
-    border-bottom: 5px solid black;
-    margin-bottom: 40px;
-    margin-top: 0px; }
-    #blog h1.span-hover {
-      display: inline-block; }
-    #blog h1.span-hover:after {
-      content: '';
-      display: block;
-      height: 5px;
-      width: 0;
-      background: transparent;
-      transition: width .5s ease, background-color .5s ease; }
-    #blog h1.span-hover:hover:after {
-      width: 100%;
-      background: black; }
-  #blog .article-blog {
-    text-transform: uppercase;
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    color: #0099CC;
-    border-bottom: 1px solid #0099CC; }
-  #blog .blog-info {
-    border: 1px solid #757575;
-    margin: 10px;
-    padding: 5px;
-    text-align: center; }
-    @media (max-width: 768px) {
-      #blog .blog-info {
-        margin: 10px 0px; } }
-    #blog .blog-info:hover {
-      border: 1px solid white;
-      background: #0099CC; }
-    #blog .blog-info:hover a {
-      color: white; }
-    #blog .blog-info a {
-      padding: 20px;
-      font-size: 16px;
-      text-transform: uppercase;
-      color: black;
-      font-weight: bold; }
-  #blog .footer {
-    font-weight: bold;
-    height: 150px;
+#blog h1 {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: black;
+  border-bottom: 5px solid black;
+  margin-bottom: 40px;
+  margin-top: 0px; }
+  #blog h1.span-hover {
+    display: inline-block; }
+  #blog h1.span-hover:after {
+    content: '';
+    display: block;
+    height: 5px;
+    width: 0;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease; }
+  #blog h1.span-hover:hover:after {
+    width: 100%;
+    background: black; }
+#blog h2.article-blog {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: bold;
+  color: #0099CC; }
+#blog .blog-info {
+  border: 1px solid #87CEFA;
+  margin: 10px;
+  padding: 5px;
+  box-shadow: 3px 3px 3px #87CEFA;
+  text-align: center; }
+  @media (max-width: 768px) {
+    #blog .blog-info {
+      margin: 10px 0px; } }
+  #blog .blog-info:hover {
+    border: 1px solid white;
     background: #87CEFA;
-    line-height: 150px;
+    box-shadow: 0px 0px 0px; }
+  #blog .blog-info:hover a {
+    color: white; }
+  #blog .blog-info a {
+    padding: 20px;
+    font-size: 16px;
     text-transform: uppercase;
-    margin-top: 30px; }
+    color: black;
+    font-weight: bold; }
+#blog .footer {
+  font-weight: bold;
+  height: 150px;
+  background: #87CEFA;
+  line-height: 150px;
+  text-transform: uppercase;
+  margin-top: 30px; }
+  @media (max-width: 425px) {
+    #blog .footer {
+      height: 60px;
+      line-height: 60px; } }
+  #blog .footer a {
+    color: #1C2331; }
+  @media (max-width: 1024px) {
+    #blog .footer .siz-copy {
+      display: none; } }
+  @media (max-width: 425px) {
+    #blog .footer .siz-copy {
+      display: block; } }
+  #blog .footer .foot-social {
+    text-align: center; }
     @media (max-width: 425px) {
-      #blog .footer {
-        height: 60px;
-        line-height: 60px; } }
-    #blog .footer a {
-      color: #1C2331; }
-    @media (max-width: 1024px) {
-      #blog .footer .siz-copy {
+      #blog .footer .foot-social {
         display: none; } }
-    @media (max-width: 425px) {
-      #blog .footer .siz-copy {
-        display: block; } }
-    #blog .footer .foot-social {
-      text-align: center; }
-      @media (max-width: 425px) {
-        #blog .footer .foot-social {
-          display: none; } }
-      #blog .footer .foot-social a {
-        color: white;
-        padding: 10px 20px;
-        margin: 5px; }
-        #blog .footer .foot-social a.facebook {
-          background: #08aae6; }
-        #blog .footer .foot-social a.twitter {
-          background: #33b5e5; }
-          @media (max-width: 768px) {
-            #blog .footer .foot-social a.twitter {
-              display: none; } }
-        #blog .footer .foot-social a.linkedin {
-          background: #FF8800; }
-        #blog .footer .foot-social a.skype {
-          background: #4285F4; }
-        #blog .footer .foot-social a.googleadd {
-          background: #ff4444; }
-        #blog .footer .foot-social a.github {
-          background: #1C2331; }
-        #blog .footer .foot-social a:hover {
-          box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15); }
+    #blog .footer .foot-social a {
+      color: white;
+      padding: 10px 20px;
+      margin: 5px; }
+      #blog .footer .foot-social a.facebook {
+        background: #08aae6; }
+      #blog .footer .foot-social a.twitter {
+        background: #33b5e5; }
+        @media (max-width: 768px) {
+          #blog .footer .foot-social a.twitter {
+            display: none; } }
+      #blog .footer .foot-social a.linkedin {
+        background: #FF8800; }
+      #blog .footer .foot-social a.skype {
+        background: #4285F4; }
+      #blog .footer .foot-social a.googleadd {
+        background: #ff4444; }
+      #blog .footer .foot-social a.github {
+        background: #1C2331; }
+      #blog .footer .foot-social a:hover {
+        box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15); }
 
 .scrolltop {
   position: fixed;
@@ -584,7 +527,7 @@ navbar .navbar-brand img {
   display: none;
   font-size: 30px;
   color: white;
-  background: #f10b33;
+  background: #87CEFA;
   border-radius: 8px;
   padding: 8px 16px;
   box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
