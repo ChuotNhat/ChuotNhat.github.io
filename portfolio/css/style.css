@@ -190,8 +190,11 @@ navbar .navbar-brand img {
     margin-bottom: 25px; }
   #services img {
     padding-bottom: 20px; }
-  #services .margin-bo {
-    margin-bottom: 80px;
+  .margin-bo {
+    margin-bottom: 60px;
+  }
+  .margin-to {
+    margin-bottom: 40px;
   }
   #services p {
     text-align: left;
