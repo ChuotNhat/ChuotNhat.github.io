@@ -190,6 +190,9 @@ navbar .navbar-brand img {
     margin-bottom: 25px; }
   #services img {
     padding-bottom: 20px; }
+  #services .margin-bo {
+    margin-bottom: 80px;
+  }
   #services p {
     text-align: left;
     font-size: 18px;
@@ -255,7 +258,8 @@ navbar .navbar-brand img {
   #graduate .content-gra p:nth-child(1) {
     background: #2BBBAD; }
   #graduate .content-gra p:nth-child(2) {
-    background: #0099CC; }
+    background: #0099CC; 
+    margin-bottom: 80px;}
 
 #contact {
   background: #87CEFA; }
