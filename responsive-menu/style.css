@@ -1,0 +1,55 @@
+body {
+	padding: 0px;
+	margin: 0px;
+}
+nav {
+	width: 80%;
+	margin: 20px auto;
+	background: red;
+	position: relative;
+}
+nav .navbar {
+	list-style-type: none;
+	padding: 0;
+}
+nav .navbar li {
+	display: inline-block;
+	padding: 10px;
+}
+
+/*Khi hover hoac click */
+nav .navbar li:hover {
+	background: pink;
+}
+.current-item {
+	background: pink;
+} 
+
+nav .navbar li a {
+	text-decoration: none;
+	color:white;
+}
+.toggle-nav {
+	position: absolute;
+	top:0;
+	right:0;
+	opacity: 0;
+}
+/*Class add*/
+nav .navbar.active {
+		display: block;
+	}
+.toggle-nav.moveClass {
+	opacity: 0;
+}
+@media only screen and (max-width:425px) {
+	.toggle-nav {
+		opacity: 1;
+	}
+	nav .navbar {
+		display: none;
+	}
+	nav .navbar li {
+		display: block;
+	}
+}

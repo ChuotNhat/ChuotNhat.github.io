@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Respnsive menu</title>
+	<meta name="viewport" content="width=device-width" />
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+	<nav>
+	    <ul class="navbar">
+	        <li class="current-item"><a href="#">Home</a></li>
+	        <li><a href="#">My Work</a></li>
+	        <li><a href="#">About Me</a></li>
+	        <li><a href="#">Get in Touch</a></li>
+	        <li><a href="#">Blog</a></li>
+	    </ul>
+	 
+	    <a class="toggle-nav" href="#"><img src="nav-icon.png"></a>
+	</nav>
+
+	<script type="text/javascript">
+		function toggleMenu(){
+			$(".toggle-nav").toggleClass("moveClass");
+			$("nav .navbar").toggleClass("active");
+
+			console.log("aa");
+		}
+
+		function changeBg(){
+			$(".navbar li").removeClass("current-item");
+			$(this).addClass("current-item")
+		}
+
+		$(".toggle-nav").on("click",toggleMenu);	
+		$(".navbar li").on("click",changeBg);	
+
+	</script>
+</body>
+</html>
