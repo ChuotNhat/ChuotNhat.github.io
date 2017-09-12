@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Demo animate slider</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<style type="text/css">
+		.slider {
+			width: 100%;
+			height: 100%;
+			display:flex;
+			justify-content: space-around;
+			align-items: center;
+			overflow: hidden;
+		}
+		.slider  .slider-left {
+			width: 19%;
+			border:1px solid;
+			height: 600px;
+			position: relative;
+		}
+		
+		.dots {
+			list-style-type: none;
+			padding: 0;
+		}
+		.dots li {
+			color:red;
+			background: yellow; 
+			padding:10px;
+			margin:10px;
+			cursor: pointer;
+		}
+		.slider .container-slider {
+			width: 60%;
+			height: 600px;
+			border:1px solid;
+			top: 0px;
+			transition: 2s;
+
+		}
+		.slider .container-slider .slide-item {
+			height: 300px;
+			position: relative;
+		}
+		.slide-item:nth-child(1) {
+			background: red;
+		}
+		.slide-item:nth-child(2) {
+			background: yellow;
+		}
+		.slide-item:nth-child(3) {
+			background:pink;
+		}
+		.slide-item:nth-child(4) {
+			background: blue;
+			height: 1200px;
+		}
+		.slider .slider-right {
+			width: 19%;
+			height: 600px;
+			border:1px solid;
+			position: relative;
+		}
+		.slider-right .btn-item {
+			background: yellow;
+			padding: 10px;
+			margin:10px;
+		}
+		.center {
+			position: absolute;
+			top:50%;
+			left: 50%;
+    		transform: translate(-50%, -50%);
+		}
+		.OpacityDown {
+			opacity: 0.3;
+		}
+	</style>
+</head>
+<body>
+	<div class="slider">
+		<div class="slider-left">
+			<ul class="dots center">
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+			</ul>
+		</div>
+		<div class="container-slider">
+			<div class="slide-item">div1</div>
+			<div class="slide-item OpacityDown">div2</div>
+			<div class="slide-item OpacityDown">div3</div>
+			<div class="slide-item OpacityDown">div4</div>
+		</div>
+		<div class="slider-right">
+			<div class="center">
+				<div class="btn-pre btn-item">lui</div>
+				<div class="btn-next btn-item">tien</div>
+			</div>
+		</div> 
+	</div>
+	<script type="text/javascript">
+		function clickele(){
+			var current = $(this).html();
+			current = parseInt(current)
+			var pre = current - 1;
+
+			$(".container-slider").animate({
+            marginTop :-(pre*600 )+"px" }, 500);
+            $(".slide-item").addClass("OpacityDown");
+            $(".slide-item").eq(pre).removeClass("OpacityDown");
+		}
+		$(".dots li").on("click",clickele);
+	</script>
+</body>
+</html>
