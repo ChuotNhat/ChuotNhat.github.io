@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Select color</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<style type="text/css"> 
+		body {
+			padding-left: 40px;
+			margin: 0;
+		}
+		#select-color {
+		    position: relative;
+		}
+		.color-current {
+			background-color: black;
+		    width: 286px;
+		    height: 50px;
+		}
+		.color-current span {
+			display: none;
+		}
+		.driver-color {
+			list-style-type: none;
+			padding: 0;
+			position: absolute;
+			top:34px;
+			display: none;
+		}
+		.driver-color li {
+			padding: 25px 43px;
+			width: 200px;
+			border-top: 1px solid white;
+		}
+		li[data-color="red"] {
+			background: red;
+		}
+		li[data-color="yellow"] {
+			background: yellow;
+		}
+		li[data-color="blue"] {
+			background: blue;
+		}
+		li[data-color="green"] {
+			background: green;
+		}
+		.driver-color li span {
+			display: none;
+		}
+		.driver-color.active-color {
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<div id="select-color">
+		<p class="color-current" data-control><span>Text</span></p>
+		<ul class="driver-color" data-bg>
+			<li data-color="red"><span>red</span></li>
+			<li data-color="yellow"><span>yellow</span></li>
+			<li data-color="blue"><span>blue</span></li>
+			<li data-color="green"><span>green</span></li>
+		</ul>
+	</div>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var that = $('#select-color');
+
+			that.find('[data-control]').on('click', addBg);
+		    that.find('[data-color]').on('click', getBg);
+		    function addBg(){
+		    	that.find('[data-bg]').addClass('active-color');
+		    }
+		    function getBg(){
+		    	var bg = $(this).attr('data-color');
+		    	that.find('[data-control]').css('background-color', bg);
+		    	$(this).parent().removeClass('active-color');
+		    }
+		});
+	</script>
+</body>
+</html>
