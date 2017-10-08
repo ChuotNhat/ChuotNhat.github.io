@@ -4,37 +4,43 @@
 	<title>Respnsive menu</title>
 	<meta name="viewport" content="width=device-width" />
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Mukta|Roboto+Slab" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
-	<nav>
+	<div class="nav">
 	    <ul class="navbar">
-	        <li class="current-item"><a href="#">Home</a></li>
-	        <li><a href="#">My Work</a></li>
-	        <li><a href="#">About Me</a></li>
-	        <li><a href="#">Get in Touch</a></li>
-	        <li><a href="#">Blog</a></li>
+	        <li class="current-item navbar-item"><a href="#">Home</a></li>
+	        <li class="navbar-item"><a href="#"><span>My Work</span></a></li>
+	        <li class="navbar-item"><a href="#"><span>About Me</span></a></li>
+	        <li class="navbar-item"><a href="#"><span>Get in Touch</span></a></li>
+	        <li class="navbar-item"><a href="#"><span>Blog</span></a></li>
 	    </ul>
-	 
-	    <a class="toggle-nav" href="#"><img src="nav-icon.png"></a>
-	</nav>
+	    <span class="navbar-toggle" href="#"></span>
+	</div>
+	<div class="container">
+		<h2>Hello</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+	</div>
 
 	<script type="text/javascript">
-		function toggleMenu(){
-			$(".toggle-nav").toggleClass("moveClass");
-			$("nav .navbar").toggleClass("active");
-
-			console.log("aa");
-		}
+		$('.navbar-item').on('click', changeBg);
 
 		function changeBg(){
-			$(".navbar li").removeClass("current-item");
-			$(this).addClass("current-item")
+			$('.navbar-item').removeClass('current-item');
+			$(this).addClass('current-item');
 		}
-
-		$(".toggle-nav").on("click",toggleMenu);	
-		$(".navbar li").on("click",changeBg);	
-
+		$('.navbar-toggle').on('click', openNav);
+		function openNav(){
+			$('.navbar').toggleClass('visible');
+		}
 	</script>
 </body>
 </html>
+
+
