@@ -77,6 +77,26 @@ body {
 
 .container {
   background-color: #62b7a7;
-  padding: 50px; }
+  padding-top: 50px;
+  font-size: 12px; }
+  .container .row .col-3 {
+    width: 33.33%;
+    float: left;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border: 1px solid; }
+  .container .row .img-icon {
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 20px; }
+    .container .row .img-icon img {
+      vertical-align: middle; }
+  .container .row .content {
+    display: inline-block;
+    vertical-align: middle; }
+  .container .row:after {
+    content: '';
+    clear: both;
+    display: block; }
 
 /*# sourceMappingURL=style.css.map */
