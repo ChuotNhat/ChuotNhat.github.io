@@ -1,0 +1,41 @@
+body {
+  padding: 0;
+  margin: 0; }
+
+.tab-links {
+  padding: 0;
+  margin: 0; }
+  .tab-links li {
+    display: inline-block;
+    background: #3F729B;
+    vertical-align: middle; }
+    .tab-links li:after {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      height: 100%; }
+    .tab-links li.active {
+      background: #1C2331; }
+  .tab-links a {
+    text-decoration: none;
+    color: white;
+    padding: 20px 30px;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px; }
+
+.tab-content {
+  width: 50%;
+  background: #1C2331;
+  color: #fff;
+  padding: 40px; }
+  .tab-content .tab-hidden {
+    display: none; }
+  .tab-content .active {
+    display: block; }
+  .tab-content .title {
+    text-transform: uppercase;
+    font-weight: 600; }
+
+/*# sourceMappingURL=style.css.map */

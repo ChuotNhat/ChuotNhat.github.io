@@ -1,0 +1,47 @@
+body {
+	padding: 0;
+	margin: 0;
+}
+.tab-links {
+	padding: 0;
+	margin: 0;
+	li {
+		display: inline-block;
+		background: #3F729B;
+		vertical-align: middle;
+		&:after {
+			content: '';
+			display: inline-block;
+			vertical-align: middle;
+			height: 100%;
+		}
+		&.active {
+			background: #1C2331;
+		}
+	}
+	a {
+		text-decoration: none;
+		color: white;
+		padding: 20px 30px;
+		display: inline-block;
+		text-transform: uppercase;
+		font-weight: 600;
+		font-size: 12px;
+	}
+}
+.tab-content {
+	width: 50%;
+	background: #1C2331;
+	color: #fff;
+	padding: 40px;
+	.tab-hidden {
+		display: none;
+	}
+	.active {
+		display: block;
+	}
+	.title {
+		text-transform: uppercase;
+		font-weight: 600;
+	}
+}
