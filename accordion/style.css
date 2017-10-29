@@ -1,0 +1,18 @@
+.container {
+  width: 80%;
+  height: 400px;
+  margin: 50px auto;
+  padding: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #33b5e5;
+  color: white; }
+  .container h3 {
+    cursor: pointer;
+    border: 2px solid white;
+    padding: 10px;
+    margin: 0; }
+  .container .content {
+    line-height: 1.4;
+    padding: 20px 0; }
+
+/*# sourceMappingURL=style.css.map */
