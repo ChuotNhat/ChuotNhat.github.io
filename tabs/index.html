@@ -26,12 +26,10 @@
         </div>
  
         <div id="tab2" class="tab-hidden">
-            <p class="title">Shape of You</p>
-            <p>Girl, you know I want your love </p>
-			<p>Your love was handmade for somebody like me </p>
-			<p>Come on now, follow my lead </p>
-			<p>I may be crazy, don't mind me </p>
-			<p>Say, boy, let's not talk too much </p>
+            <form action="">
+				Search by keywork: <input type="text" name='text' id="text"/>
+				<button type='submit'>Submit</button>
+			</form>
         </div>
 
         <div id="tab3" class="tab-hidden">
@@ -55,14 +53,22 @@
 
 	<script type="text/javascript">
 		$(document).ready(function(){
+			function getCurrentTab(x) {
+				if(x) {
+					// Show/Hide Tabs
+					$(x).show().siblings().hide();
+					// Change/remove current tab to active
+					$('a[href="'+x+'"]').parent('li').addClass('active').siblings().removeClass('active');
+				}
+			}
+			getCurrentTab(localStorage.getItem('activetab'))
 		    $('.tab-links a').on('click', function(){
-		    	var currentTab = $(this).attr('href');
-		    	// Show/Hide Tabs
-		    	$(currentTab).show().siblings().hide();
-		    	// Change/remove current tab to active
-		    	$(this).parent('li').addClass('active').siblings().removeClass('active');
-
-		    });
+				var currentTab = $(this).attr('href');
+				localStorage.setItem('activetab', currentTab);
+				getCurrentTab(localStorage.getItem('activetab'))
+				
+			});
+			
 		});
 	</script>
 </body>
