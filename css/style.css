@@ -9,10 +9,100 @@ html, body {
 #intro, #eat, #work, #flight, #sea, #sea1, #ocean {
   overflow: hidden; }
 
+@-webkit-keyframes type {
+  from {
+    width: 0; } }
+
+@keyframes type {
+  from {
+    width: 0; } }
+@-webkit-keyframes type2 {
+  0% {
+    width: 0; }
+  50% {
+    width: 0; }
+  100% {
+    width: 100; } }
+@keyframes type2 {
+  0% {
+    width: 0; }
+  50% {
+    width: 0; }
+  100% {
+    width: 100; } }
 #intro {
-  background-image: url("../img/ss4.png");
   height: 673px;
   position: relative; }
+  #intro .typping-class {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%); }
+    #intro .typping-class .typewrite {
+      font-size: 50px;
+      color: white;
+      font-weight: 600;
+      letter-spacing: 0.5;
+      text-decoration: none; }
+  #intro .paws-dog {
+    position: absolute;
+    top: 10%; }
+    #intro .paws-dog img:nth-child(odd) {
+      padding-bottom: 121px; }
+    #intro .paws-dog img:nth-child(even) {
+      margin-top: 121px; }
+    #intro .paws-dog img:nth-child(0) {
+      -webkit-animation: type 2s steps(60, end);
+              animation: type 2s steps(60, end); }
+    #intro .paws-dog img:nth-child(1) {
+      -webkit-animation: type 4s steps(60, end);
+              animation: type 4s steps(60, end); }
+    #intro .paws-dog img:nth-child(2) {
+      -webkit-animation: type 6s steps(60, end);
+              animation: type 6s steps(60, end); }
+    #intro .paws-dog img:nth-child(3) {
+      -webkit-animation: type 8s steps(60, end);
+              animation: type 8s steps(60, end); }
+    #intro .paws-dog img:nth-child(4) {
+      -webkit-animation: type 10s steps(60, end);
+              animation: type 10s steps(60, end); }
+    #intro .paws-dog img:nth-child(5) {
+      -webkit-animation: type 12s steps(60, end);
+              animation: type 12s steps(60, end); }
+    #intro .paws-dog img:nth-child(6) {
+      -webkit-animation: type 14s steps(60, end);
+              animation: type 14s steps(60, end); }
+    #intro .paws-dog img:nth-child(7) {
+      -webkit-animation: type 16s steps(60, end);
+              animation: type 16s steps(60, end); }
+    #intro .paws-dog img:nth-child(8) {
+      -webkit-animation: type 18s steps(60, end);
+              animation: type 18s steps(60, end); }
+    #intro .paws-dog img:nth-child(9) {
+      -webkit-animation: type 20s steps(60, end);
+              animation: type 20s steps(60, end); }
+    #intro .paws-dog img:nth-child(10) {
+      -webkit-animation: type 22s steps(60, end);
+              animation: type 22s steps(60, end); }
+    #intro .paws-dog img:nth-child(11) {
+      -webkit-animation: type 24s steps(60, end);
+              animation: type 24s steps(60, end); }
+    #intro .paws-dog img:nth-child(12) {
+      -webkit-animation: type 26s steps(60, end);
+              animation: type 26s steps(60, end); }
+    #intro .paws-dog img:nth-child(13) {
+      -webkit-animation: type 28s steps(60, end);
+              animation: type 28s steps(60, end); }
+    #intro .paws-dog img:nth-child(14) {
+      -webkit-animation: type 30s steps(60, end);
+              animation: type 30s steps(60, end); }
+  #intro .background-green {
+    height: 340px;
+    background-color: aquamarine; }
+  #intro .background-red {
+    height: 340px;
+    background-color: #eea29a; }
   #intro #mouse-run-ngang {
     position: absolute;
     top: 30px;
@@ -301,6 +391,12 @@ html, body {
       #ocean .ong-hut {
         left: 54px; } }
 
+@-webkit-keyframes flight {
+  from {
+    right: 0px; }
+  to {
+    right: 1370px; } }
+
 @keyframes flight {
   from {
     right: 0px; }
@@ -335,5 +431,4 @@ html, body {
   z-index: 10000;
   border: 1px solid blue;
   font-size: 20px; }
-
 /*# sourceMappingURL=style.css.map */

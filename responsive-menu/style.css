@@ -13,7 +13,6 @@ body {
     margin: 0;
     display: table;
     width: 100%;
-    -webkit-transition: 0.01s;
     transition: 0.01s;
     background: #02a0c7; }
     @media only screen and (max-width: 768px) {
@@ -69,8 +68,7 @@ body {
         background: #fff;
         top: 13px;
         left: 16%;
-        -webkit-box-shadow: 0 10px 0 #fff, 0 20px 0 #fff;
-                box-shadow: 0 10px 0 #fff, 0 20px 0 #fff; }
+        box-shadow: 0 10px 0 #fff, 0 20px 0 #fff; }
       @media only screen and (max-width: 768px) {
         .nav .navbar-toggle {
           display: block; } }
@@ -82,8 +80,7 @@ body {
   .container .row .col-3 {
     width: 33.33%;
     float: left;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
     border: 1px solid; }
   .container .row .img-icon {
     display: inline-block;

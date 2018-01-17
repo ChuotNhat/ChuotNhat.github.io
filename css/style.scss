@@ -32,10 +32,96 @@ html, body {
 #intro, #eat, #work, #flight, #sea,#sea1,#ocean  {
 	overflow:hidden;
 }
+@keyframes type{ 
+	from { width: 0; } 
+} 
+
+@keyframes type2{
+0%{width: 0;}
+50%{width: 0;}
+100%{ width: 100; } 
+}
 #intro {
-	background-image:url("../img/ss4.png");
+	// background-image:url("../img/ss4.png");
 	height:673px;
-	position:relative;
+	position:relative; 
+	.typping-class {
+		position: absolute;
+		left: 50%;
+		top:30%;
+		transform: translateX(-50%);
+		.typewrite {
+			font-size: 50px;
+			color: white;
+			font-weight: 600;
+			letter-spacing: 0.5;
+			text-decoration: none;
+		}
+	}
+	.paws-dog{
+		position: absolute;
+		top: 10%;
+		img:nth-child(odd) {
+			padding-bottom: 121px;
+		}
+		img:nth-child(even) {
+			margin-top: 121px;
+		}
+		img:nth-child(0) {
+			animation: type 2s steps(60, end); 
+		}
+		img:nth-child(1) {
+			animation: type 4s steps(60, end); 
+		}
+		img:nth-child(2) {
+			animation: type 6s steps(60, end); 
+		}
+		img:nth-child(3) {
+			animation: type 8s steps(60, end); 
+		}
+		img:nth-child(4) {
+			animation: type 10s steps(60, end); 
+		}
+		img:nth-child(5) {
+			animation: type 12s steps(60, end); 
+		}
+		img:nth-child(6) {
+			animation: type 14s steps(60, end); 
+		}
+		img:nth-child(7) {
+			animation: type 16s steps(60, end); 
+		}
+		img:nth-child(8) {
+			animation: type 18s steps(60, end); 
+		}
+		img:nth-child(9) {
+			animation: type 20s steps(60, end); 
+		}
+		img:nth-child(10) {
+			animation: type 22s steps(60, end); 
+		}
+		img:nth-child(11) {
+			animation: type 24s steps(60, end); 
+		}
+		img:nth-child(12) {
+			animation: type 26s steps(60, end); 
+		}
+		img:nth-child(13) {
+			animation: type 28s steps(60, end); 
+		}
+		img:nth-child(14) {
+			animation: type 30s steps(60, end); 
+		}
+
+	}
+	.background-green {
+		height: 340px;
+		background-color: aquamarine;
+	} 
+	.background-red {
+		height: 340px;
+		background-color: #eea29a;
+	}
 	#mouse-run-ngang {
 		position: absolute;
 	    top: 30px;

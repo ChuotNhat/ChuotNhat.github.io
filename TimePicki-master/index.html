@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>TimePicki - From To</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/timepicki.css" rel="stylesheet">
+    <style>
+      .error {
+        color:red;
+      }
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="from-time">
+      <label for="timepicker1">From time</label>
+      <input id="timepicker1" type="text" name="timepicker1"/>
+    </div>
+    <div class="to-time">
+      <label for="timepicker2">From time</label>
+      <input id="timepicker2" type="text" name="timepicker1"/>
+    </div>
+    <p class="error hidden notify">To time can not be smaller than from time</p>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/timepicki.js"></script>
+    <script>
+      $('#timepicker1,#timepicker2').timepicki(
+        {
+          show_meridian:false,
+          min_hour_value:0,
+          max_hour_value:23,
+          overflow_minutes:true,
+          increase_direction:'up',
+          disable_keyboard_mobile: true,
+          on_change: function(target){
+    
+            if (target.id === 'timepicker1') {
+              window.from = $('#timepicker1').val().replace(":","");
+              if(window.to) {
+                if (window.to < window.from) {
+                  $('p').removeClass('hidden');
+                }
+                else {
+                  $('p').addClass('hidden');
+                }
+              }
+              
+            
+            } else if (target.id === 'timepicker2') {
+              window.to = $('#timepicker2').val().replace(":","");
+              if(window.from) {
+                if (window.to < window.from) {
+                  $('p').removeClass('hidden');
+                }
+                else {
+                  $('p').addClass('hidden');
+                }
+              }
+            }
+          }
+        });
+    </script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
+

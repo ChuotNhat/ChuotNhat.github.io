@@ -1,0 +1,16 @@
+input {
+  height: 50px;
+  width: 400px;
+}
+.from-time {
+  padding: 50px 0 10px 50px;
+}
+.to-time {
+ padding: 10px 0 10px 50px;
+}
+.timepicker_wrap {
+  top: 55px !important; 
+}
+p {
+  padding-left: 50px;
+}
