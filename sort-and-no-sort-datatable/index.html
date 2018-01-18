@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="datatables.css">
+        <script src="jquery.js"></script>
+        <script src="datatable.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('#example').dataTable({
+                    "columnDefs": [{
+                        "targets": 'no-sort',
+                        "orderable": false,
+                        "sWidth": "20%"
+                }]
+            });
+            });
+        </script>
+    </head>
+    <body>
+        <div style="width: 800px; margin:20px auto;border: 1px solid black;padding: 20px;">
+            <table class="table table-bordered" id="example" style="width: 760px; margin: 20px auto;" >
+                <thead>
+                <tr >
+                    <th class="no-sort">Bài hát hay nhất</th>
+                    <th class="no-sort">Bài hát hít nhất</th>
+                    <th>Bài hát tôi yêu</th>
+                    <th>Bài hát mới nhất</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr style="text-align:center;">
+                        <td>Ta còn yêu nhau</td>
+                        <td>Từ ngày e đến</td>
+                        <td>Người lạ ơi</td>
+                        <td>Buồn của anh</td>
+
+                    </tr>
+                    <tr style="text-align:center;">
+                        <td>Âm thầm bên em</td>
+                        <td>Mặt trời của em</td>
+                        <td>Có khi</td>
+                        <td>Để em rời xa</td>
+
+                    </tr>
+                    <tr style="text-align:center;">
+                        <td>Xin đừng lặng im</td>
+                        <td>Giấc mơ trưa</td>
+                        <td>Giữ em đi</td>
+                        <td>Chia tay</td>
+                    </tr>
+                    <tr style="text-align:center;">
+                        <td>Chạy đến bên anh</td>
+                        <td>Anh thì không</td>
+                        <td>Như một giấc mơ</td>
+                        <td>Hạnh phúc là em</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>    
+    </body>
+</html>
