@@ -1,0 +1,10 @@
+mixin imgForSpace(w, h)
+  img(alt="", src="images/spacer20.gif", height=h||1, width=w||1)
+
+mixin hSpace(opts)
+  if opts.tagName
+    #{opts.tagName}.space&attributes(attributes)
+      +imgForSpace(opts.width, opts.height)
+  else
+    .space&attributes(attributes)
+      +imgForSpace(opts.width, opts.height)

@@ -1,0 +1,33 @@
+//- mixin nav(items)
+//-   ul&attributes(attributes)
+//-     each item, key in items
+//-       // - var active = ''+ ' ' +
+//-       - var active = item.class
+//-       // - if (key === menuIndex) active = 'active'
+//-       li(class=item.class)
+//-         +link(item.title, item.href, item.text)
+//-           span!=item.title
+//-         if (typeof(item.itemsMenu) !== 'undefined')
+//-           +nav(item.itemsMenu)
+mixin nav(items)
+  ul&attributes(attributes)
+    each item, key in items
+      - var active = item.class
+      li(class=item.class)
+        +link(item.title, item.href, item.text)
+          span!=item.title
+        if (typeof(item.itemsMenu) !== 'undefined')
+          +nav(item.itemsMenu)
+    block
+
+
+mixin manage-nav(items)
+  ul&attributes(attributes)
+    each item, key in items
+      - var active = ''
+      - if (key === menuIndex) active = 'mng-active'
+      li(class=active data-sub-menu= item.id)
+        +link(item.title, item.href, item.text)
+          span!=item.title
+        if (typeof(item.itemsMenu) !== 'undefined')
+          +nav(item.itemsMenu)

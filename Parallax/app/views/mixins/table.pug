@@ -1,0 +1,15 @@
+mixin table-thead(items)
+  thead&attributes(attributes)
+    tr
+      each item in items
+
+        th(class=item.clsThead)!=item.textThead
+mixin table-row(items)
+  each item in items
+    - if(typeof(item.textTbody) === 'undefined') {
+      +selectDefault(item.id, item.txtLabel, item.options, item.attrLabel, item.classSelect)
+    - } else {
+      td(class=item.clsTbody, data-title=item.attr, data-confirm-info=item.attrDele)!=item.textTbody
+    -}
+
+

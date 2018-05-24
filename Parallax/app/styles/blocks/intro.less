@@ -1,0 +1,31 @@
+
+.intro{
+  width: 100%;
+  // background: repeating-linear-gradient(-180deg, #33b5e5, #33b5e5 6px, #0099CC 6px, #0099CC 20px);
+  background: linear-gradient(to right, #4CB8C4, #26a0da);
+  background-size: cover;
+  padding: 50px 0;
+  background-position: top;
+  .title {
+    font-family: 'Finger Paint', cursive;
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .content {
+    width: 76%;
+    margin: 0 auto;
+    padding-top: 40px;
+    .left,
+    .right {
+      float: left;
+      width: 50%;
+      line-height: 1.5;
+      @media (max-width: 425px){
+        width: 100%;
+        padding-top: 10px;
+      }
+    }
+    .clearfix();
+  }
+}

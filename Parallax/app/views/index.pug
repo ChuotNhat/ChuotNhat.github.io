@@ -1,0 +1,14 @@
+extends layouts/layout
+
+block vars
+  -title = 'Paralax'
+  -bodyClass = ''
+block container
+  main
+    .grid
+      include blocks/intro.pug
+      include blocks/video.pug
+      include blocks/review.pug
+      include blocks/photo.pug
+
+     

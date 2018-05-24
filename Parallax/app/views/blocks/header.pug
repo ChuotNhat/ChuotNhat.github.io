@@ -1,0 +1,90 @@
+include ../mixins/all
+header.home(data-menu-dropdown)
+  .container
+    .home_nav
+      .home_nav-logo
+        .logo
+          img(src="../images/star.png")
+        .title sinfor travel
+      .home_nav-navbar
+        div.nav-item
+          a(href="javascript:void(0);" title="reserve now") reserve now
+        div.nav-item
+          a(href="javascript:void(0);" title="01672.419.575") 01672.419.575
+        div.nav-item(data-btn-menu)
+          a(href="javascript:void(0);" title="menu") menu
+    .home_banner
+      .title wellcome sea
+      .content find yourself at sea
+    .home_footer
+      .home_footer_content
+        .content1 
+          i.fa.fa-bus
+          span Sightseeing
+        .content2
+          i.fa.fa-music
+          span Relaxing
+        .content3
+          i.fa.fa-camera
+          span Take photo
+        .content4
+          i.fa.fa-heartbeat
+          span Sea food
+    .home_menu-right(data-menu-content)
+      div.menu-parent
+        .close
+          button(title="Close (Esc)" type="button" data-close) ×
+        ul.menu
+           
+          li.menu-sub
+            a(href="javascript:void(0);" title="" data-dropdown)
+              span experiences
+              i.fa.fa-chevron-right
+            ul.menu-1
+              li.menu-sub-1
+                a(href="#" title="")
+                  span go fishing
+              li.menu-sub-1
+                a(href="#" title="")
+                  span relaxation
+              li.menu-sub-1
+                a(href="#" title="")
+                  span dinning
+          li.menu-sub
+            a(href="#" title="") 
+              span about   
+          li.menu-sub
+            a(href="javascript:void(0);" title="" data-dropdown)
+              span pricing
+              i.fa.fa-chevron-right
+            ul.menu-1
+              li.menu-sub-1
+                a(href="#" title="")
+                  span our rates
+              li.menu-sub-1
+                a(href="#" title="")
+                  span rental equipment 
+          li.menu-sub
+            a(href="javascript:void(0);" title="" data-dropdown) 
+              span plan your trip
+              i.fa.fa-chevron-right
+            ul.menu-1
+              li.menu-sub-1
+                a(href="#" title="")
+                  span how to reserve
+              li.menu-sub-1
+                a(href="#" title="")
+                  span what to pack
+              li.menu-sub-1
+                a(href="#" title="")
+                  span getting here
+          li.menu-sub
+            a(href="#" title="") 
+              span blog
+          li.menu-sub
+            a(href="#" title="") 
+              span contact
+        div.btn-menu
+          div reserve now
+          div 01672.419.575
+          div tour the island

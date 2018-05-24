@@ -1,0 +1,151 @@
+//- Button
+mixin button(opts)
+  - if(typeof(opts.title) === 'undefined') opts.title = opts.name
+  button(type=opts.type,
+    name=opts.name,
+    title=opts.title,
+    id=opts.id)&attributes(attributes)
+    if block
+      block
+//- Form
+mixin form(opts)
+  form(action=opts.action ? opts.action : '#',
+    method=opts.method ? opts.method : 'post',
+    name=opts.name ? opts.name : opts.name = opts.id,
+    id=opts.id ? opts.id : opts.name)&attributes(attributes)
+    if block
+      block
+mixin custom-radio(label,obj, obj1, attrInput, attrInput1)
+  .custom-radio&attributes(attributes)
+    - if(typeof attrInput === 'undefined') attrInput = {}
+    - if(typeof attrInput1 === 'undefined') attrInput1 = {}
+    - if(obj.ischecked) attrInput['checked'] = 'checked'
+    - if(obj1.ischecked) attrInput1['checked'] = 'checked'
+    - if(obj.isAttrchecked) attrInput['data-checked'] = 'true'
+    - if(obj1.isAttrchecked) attrInput1['data-checked'] = 'true'
+    .custom-radio__label #{label}
+    .custom-radio-inner
+      input(
+        type = (obj.type)
+        name = (obj.name||obj.id)
+        class = obj.classInput ? obj.classInput : "custom-radio__control",
+        id = obj.id,
+        placeholder = obj.placeholder
+        maxlength=obj.maxlength
+        value = obj.valueInput || ''
+      )&attributes(attrInput)
+      label.custom__label(for=obj.id, class=obj.classlabel)&attributes(attrLabel) #{obj.inputlabel}
+    .custom-radio-inner1
+      input(
+        type = (obj1.type)
+        name = (obj1.name||obj1.id)
+        class = obj1.classInput ? obj1.classInput : "custom-radio__control",
+        id = obj1.id,
+        placeholder = obj1.placeholder
+        maxlength=obj1.maxlength
+        value = obj1.valueInput || ''
+      )&attributes(attrInput1)
+      label.custom__label(for=obj1.id, class=obj1.classlabel)&attributes(attrLabel1) #{obj1.inputlabel}
+
+mixin input(obj)
+  - if (typeof(obj.type) === 'undefined') obj.type = 'text'
+  - if (typeof(obj.title) === 'undefined') obj.title = obj.text
+  - if (typeof(obj.name) === 'undefined') obj.name = obj.id
+  input(type=obj.type, id=obj.id, name=obj.name, placeholder=obj.placeholder, title=obj.title, value = obj.value)&attributes(attributes)
+
+mixin custom-input(obj, attrInput)
+  .custom-input&attributes(attributes)
+    label.custom-input__label(for=obj.id, class=obj.classlabel)&attributes(attrLabel) #{obj.inputlabel}
+    - if(typeof attrInput === 'undefined') attrInput = {}
+    - if(obj.type === 'file') attrInput['data-upload-field'] = 'true'
+    - if(obj.type === 'file') attrInput['data-parsley-max-file-size'] = '2'
+    - if(obj.type === 'file') attrInput['data-parsley-file-extension'] = 'jpg,jpeg,png,svg'
+    - if(obj.isRequired) attrInput['data-parsley-required'] = true
+    - if(obj.isEmailValidate) attrInput['data-parsley-type'] = 'email'
+    - if(obj.isNumberValidate) attrInput['data-parsley-type'] = 'number'
+    - if(obj.isEqualToValidate !== undefined) attrInput['data-parsley-equalto'] = obj.isEqualToValidate
+    - if(obj.type === 'number') attrInput['pattern'] = '[0-9]*', attrInput['data-parsley-type'] ='number'
+    - if(obj.type === 'numberWithDecimal') obj.type = 'number', attrInput['pattern'] = '[-0-9]+?[\\.0-9]*', attrInput['data-parsley-type'] ='number'
+    - if(obj.type === 'tel') attrInput['pattern'] = '[0-9]*', attrInput['data-parsley-type'] ='number'
+    - if(obj.isMin) attrInput['data-parsley-min'] ='0'
+    - if(obj.type === 'telNotValidate') obj.type = 'tel', attrInput['pattern'] = '[0-9]*'
+    - if(obj.isDatePicker) attrInput['data-date-picker'] = true
+    - if(obj.isTimePicker) attrInput['data-time-picker'] = true
+    - if(obj.isGmapAutocomplete) attrInput['data-gmap-autocomplete'] = true
+    - if(obj.isGetLocation) attrInput['data-get-location'] = true
+    - if(obj.disabled) attrInput['disabled'] = true
+    - if(obj.colorFieldName) attrInput['data-color-name'] = obj.colorFieldName
+    - if(obj.searchAutocomplete) attrInput['data-search-autocomplete'] = true
+    - if(obj.isht) attrInput['data-ht'] = true
+    - if(obj.istva) attrInput['data-tva'] = true
+    - if(obj.isttc) attrInput['data-ttc'] = true
+    - if(obj.iscompanyID) attrInput['data-companyid'] = true
+    - if(obj.issupervisorID) attrInput['data-supervisorid'] = true
+    - if(obj.iscontactName) attrInput['data-contact-name'] = true
+    - if(obj.isPhone) attrInput['data-phone-company'] = true
+    - if(obj.isAcept) attrInput['accept'] = '.jpg,.jpeg,.png,.svg'
+    - if(obj.readOnly) attrInput['readonly'] = true
+    - if(obj.fromTime) attrInput['data-from-time'] = true
+    - if(obj.toTime) attrInput['data-to-time'] = true
+
+    .custom-input-inner
+      if (obj.classIcon)
+        span(class=obj.classIcon)
+      input(
+        type = (obj.type)
+        disabled = (obj.disabled)
+        name = (obj.name||obj.id)
+        class = obj.classInput ? obj.classInput : "custom-input__control",
+        id = obj.id,
+        placeholder = obj.placeholder
+        maxlength=obj.maxlength
+        value = obj.valueInput || ''
+      )&attributes(attrInput)
+      if (obj.hasHidden)
+        input(type="hidden" name=obj.hiddenName)
+      if (obj.hasRequired)
+        span.required__element * Required field
+      block
+
+mixin selectDefault(id, txtLabel, options, attrLabel, selectAttr, optionAttr)
+  - if(typeof(selectAttr) === 'undefined') selectAttr = {}
+  - if(typeof(optionAttr) === 'undefined') optionAttr = {}
+  .custom-select&attributes(attributes)
+    - attrLabel = attrLabel ? attrLabel : {}
+      label(for=id, class="custom-select__label")&attributes(attrLabel)!=txtLabel
+      .custom-select-inner
+        select(id=id, name=id class=classSelectOption)&attributes(selectAttr)
+          each item in options
+            - if(item.type !== 'undefined') optionAttr['data-type'] = item.type
+            - if(item.valueData) optionAttr['data-value'] = item.valueData
+            - if(item.value) optionAttr['value'] = item.value
+            - if(item.selected) optionAttr['selected'] = ''
+            option&attributes(optionAttr)!=item.key
+
+mixin textarea(name, maxlength)
+  - if (typeof(id) === 'undefined') id=name
+  textarea(name=name, id=name, maxlength=maxlength)&attributes(attributes)
+
+mixin custom-checkbox(obj, attrInput)
+  .custom-checkbox&attributes(attributes)
+    - if(typeof attrInput === 'undefined') attrInput = {}
+    - if(obj.isRequired) attrInput['data-parsley-required'] = ''
+    input(
+      type = "checkbox"
+      name = (obj.name||obj.id)
+      class = obj.classInput ? obj.classInput : "custom-checkbox__control"
+      value = obj.value ? obj.value : null
+      checked = obj.checked ? obj.checked : null
+      id = obj.id
+    )&attributes(attrInput)
+    label(for=obj.id, class="custom-checkbox__label")
+      span.custom-checkbox__text !{obj.checkboxlabel}
+        //- if (obj.hasSpecify)
+        //-   label(for=obj.id, class="hidden") #{obj.labelSpecify||""}
+        //-   input(
+        //-     type = "text"
+        //-     name = "specify"
+        //-     class = "custom-control__specify"
+        //-     id = obj.idSpecify,
+        //-     placeholder = "Please specify"
+        //-   )

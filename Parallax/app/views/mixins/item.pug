@@ -1,0 +1,61 @@
+mixin item(items)
+  each item in items
+    .slider__item
+      .slider__desc
+        .grid
+          h2(class=item.titleClass)!=item.title
+          p(class=item.subClass)!=item.subtitle
+      +img(item.alt, item.src).visible-lg.visible-md
+      +img(item.alt, item.src1).visible-sm.visible-xs
+
+mixin item1(items)
+  each item in items
+    .slider__item
+      p(class=item.titleClass, title=item.title)!=item.title
+
+mixin item-detail(items)
+  each item in items
+    dl&attributes(attributes)
+      dt!=item.term
+      dd!=item.desc
+
+mixin booking-detail(items)
+  ul&attributes(attributes)
+    each item in items
+      li
+        span!=item.term
+        span!=item.desc
+
+mixin item-latest(item)
+  li.latest-vehicles__item
+    +img(item.alt, item.src)
+    .latest-vehicles__info
+      h3.latest-vehicles__info-title!=item.title
+      p.latest-vehicles__info-desc!=item.desc
+      p.latest-vehicles__info-price!=item.price
+      +link("View model", "#").link.link--style
+        span.icon.icon-arrow-r
+        span.link__text View model
+
+mixin faq-list(items)
+  ul&attributes(attributes)
+    each item in items
+      li
+        h3.faq-question Q. #{item.question}
+        .faq-answer A: #{item.answer}
+
+mixin switch(obj, attrInput)
+  - if(attrInput === undefined) attrInput = {}
+  - if(obj.updateStatus) attrInput['data-update-btn'] = 'true'
+  - if(obj.updateStatus) attrInput['data-update-status'] = obj.updateStatus
+  - if(obj.updateStatus) attrInput['data-item-id'] = obj.itemId
+  - if(obj.value === 'true') attrInput['checked'] = 'checked'
+  - if(obj.disabled === 'true') attrInput['disabled'] = 'disabled'
+  label(for=obj.id, class="switch")&attributes(attributes)!=obj.label
+    input(
+      type = "checkbox"
+      name = (obj.name||obj.id)
+      value = obj.value ? obj.value : null
+      id = obj.id
+    )&attributes(attrInput)
+    .slider

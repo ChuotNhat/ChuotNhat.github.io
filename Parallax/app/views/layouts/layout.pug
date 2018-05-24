@@ -1,0 +1,37 @@
+include ../mixins/all
+
+block vars
+  -title = 'Site'
+  -bodyClass = ''
+  -hasGmap = true
+
+doctype html
+html(class="no-js", lang="en")
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    title=title
+    meta(name="description", content="")
+    meta(name="keywords", content="")
+    meta(name="robots", content="index, follow")
+    meta(name="author", content="")
+    meta(name="viewport", content="width=device-width, initial-scale=1,user-scalable=no, shrink-to-fit=no")
+    link(rel="icon", href="favicon.ico", type="image/x-icon", sizes="16x16")
+    // build:css css/style.css
+    link(rel="stylesheet", href="style/libs.css")
+    link(rel="stylesheet", href="style/style.css")
+    //- Font
+    <link href="https://fonts.googleapis.com/css?family=Istok+Web" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Finger+Paint" rel="stylesheet">
+    // endbuild
+  body(class=bodyClass)
+    - if(!popup)
+      include ../blocks/header
+    block container
+    - if(!popup)
+      include ../blocks/footer
+    block layer
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src="../js/script.js")
+    //[if lte IE 9]><p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif]
+    noscript JavaScript is off. Please enable to view full site.

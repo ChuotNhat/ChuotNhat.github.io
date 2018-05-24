@@ -1,0 +1,18 @@
+mixin pagging(start, numPages, curr, base)
+  ul.paging&attributes(attributes)
+    li.first-page
+      a(href=base, title="First page")  &#171;
+    li.prev-page
+      a(href=base, title="Previous") &lsaquo;
+    - for(var i=start; i < start + numPages; i++) {
+      - if(i==curr)
+        li.active
+          span=i
+      - else
+        li
+          a(href=base, title=i) #{i}
+    - }
+    li.next-page
+      a(href=base, title="Next") &rsaquo;
+    li.last-page
+      a(href=base, title="Last page") &#187;

@@ -1,0 +1,92 @@
+.footer {
+  color: white;
+  text-align: center;
+  background-image: url("../images/dog-sea2.jpg");
+  height: 600px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  &_logo {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-40%, -50%);
+    .logo {
+      width: 50px;
+      height: 50px;
+      margin: 10px auto;
+      img {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+    }
+    .title {
+      font-weight: 600;
+      font-family: 'Finger Paint', cursive;
+      text-transform: uppercase;
+    }
+              
+  }
+  &_social {
+    padding: 30px;
+    a {
+      font-size: 18px;
+      padding: 8px 12px;
+      border-radius: 50%;
+      box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
+      color: white;
+      margin: 10px;
+    }
+  }
+  &_message {
+    position: absolute;
+    bottom: 100px;
+    left: 0;
+    right: 0;
+    .title {
+      margin-bottom: 10px;
+    }
+    .form {
+      .btn--email {
+        width: 270px;
+        color: black;
+        @media (max-width:424px) {
+          width: 200px;
+        }
+      }
+      .btn {
+        padding: 10px;
+        height: 50px;
+        border: 1px solid white;
+        font-size: 1rem;
+      }
+      .btn--button {
+        border: 1px solid @orange;
+        padding: 10px 20px;
+        color: white;
+        background: @orange;
+        text-transform: uppercase;
+        &:hover {
+          color: @orange;
+          background: @white;
+          border: 1px solid @orange;
+        }
+      }
+    }
+  }
+  &_copyright {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #0F2027;
+    padding: 20px;
+    span {
+      font-size: 14px;
+    }
+        
+  }
+}
