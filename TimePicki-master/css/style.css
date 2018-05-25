@@ -1,6 +1,7 @@
-input {
-  height: 50px;
-  width: 400px;
+.btn--time {
+  height: 40px;
+  width: 300px;
+  padding-left: 10px;
 }
 .from-time {
   padding: 50px 0 10px 50px;
