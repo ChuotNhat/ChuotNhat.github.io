@@ -24,11 +24,11 @@
   <body>
     <div class="from-time">
       <label for="timepicker1">From time</label>
-      <input id="timepicker1" type="text" name="timepicker1"/>
+      <input id="timepicker1" type="text" name="timepicker1" class="btn--time"/>
     </div>
     <div class="to-time">
-      <label for="timepicker2">From time</label>
-      <input id="timepicker2" type="text" name="timepicker1"/>
+      <label for="timepicker2">To time</label>
+      <input id="timepicker2" type="text" name="timepicker1" class="btn--time"/>
     </div>
     <p class="error hidden notify">To time can not be smaller than from time</p>
 
@@ -48,7 +48,7 @@
             if (target.id === 'timepicker1') {
               window.from = $('#timepicker1').val().replace(":","");
               if(window.to) {
-                if (window.to < window.from) {
+                if (window.to <= window.from) {
                   $('p').removeClass('hidden');
                 }
                 else {
@@ -60,7 +60,7 @@
             } else if (target.id === 'timepicker2') {
               window.to = $('#timepicker2').val().replace(":","");
               if(window.from) {
-                if (window.to < window.from) {
+                if (window.to <= window.from) {
                   $('p').removeClass('hidden');
                 }
                 else {
