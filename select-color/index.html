@@ -12,7 +12,7 @@
 		    position: relative;
 		}
 		.color-current {
-			background-color: black;
+			background-color: red;
 		    width: 286px;
 		    height: 50px;
 		}
@@ -34,8 +34,8 @@
 		li[data-color="red"] {
 			background: red;
 		}
-		li[data-color="yellow"] {
-			background: yellow;
+		li[data-color="orange"] {
+			background: orange;
 		}
 		li[data-color="blue"] {
 			background: blue;
@@ -52,11 +52,12 @@
 	</style>
 </head>
 <body>
+  <p>SELECT COLOR</p>
 	<div id="select-color">
 		<p class="color-current" data-control><span>Text</span></p>
 		<ul class="driver-color" data-bg>
 			<li data-color="red"><span>red</span></li>
-			<li data-color="yellow"><span>yellow</span></li>
+			<li data-color="orange"><span>orange</span></li>
 			<li data-color="blue"><span>blue</span></li>
 			<li data-color="green"><span>green</span></li>
 		</ul>
