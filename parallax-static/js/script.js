@@ -352,6 +352,7 @@
       that.menuE1 = that.menuEl.find(opts.classMenu1);
 
       that.btnMenu.on('click.' +pluginName, function(){
+        body.css({'padding-right': window.innerWidth - doc.width()});
         body.addClass(opts.classBodyOverflow);
         that.menuParent.addClass(opts.menuAuto);
         that.menuEl.addClass(opts.classMenuWidth);
@@ -372,6 +373,7 @@
         if (target.closest(that.btnClose).length || (!target.closest(that.menuEl).length && 
         !target.closest(that.btnMenu).length)){
           that.menuParent.removeClass(opts.menuAuto);
+          body.css({'padding-right': 0});
           body.removeClass(opts.classBodyOverflow);
           that.menuE1.slideUp();
           that.menuDropdown.removeClass(opts.classAnimateIcon);
