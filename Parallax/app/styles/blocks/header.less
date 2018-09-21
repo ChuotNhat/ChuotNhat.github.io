@@ -58,6 +58,11 @@
         border: 1px solid;
         position: relative;
         overflow: hidden;
+        @media (max-width: 425px){
+          &:nth-child(2) {
+            display: none;
+          }
+        }
         a {
           height: 100%;
           color: white;
@@ -110,7 +115,10 @@
     text-transform: uppercase;
     text-align: center;
     cursor: pointer;
-    
+    @media (max-width: 425px){
+      width: 250px;
+      height: 250px;
+    }
     &:before {
       content: "";
       width: 100%;
@@ -152,7 +160,7 @@
       font-family: 'Finger Paint', cursive;
       font-weight: bold;
       @media (max-width: 425px) {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
       }
     }
     .content {
@@ -216,7 +224,6 @@
     }
     position: fixed;
     top: 0; 
-    right: 0;
     right: -420px;
     width: 0;
     bottom: 0;
@@ -310,6 +317,9 @@
 .menu-width {
   width: 420px;
   right: 0;
+  @media (max-width: 425px) {
+    width: 100%;
+  }
 }
 
 @keyframes sheen {

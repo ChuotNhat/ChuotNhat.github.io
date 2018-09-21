@@ -45,6 +45,9 @@
     width: 90%;
     margin: 10px auto;
     .clearfix();
+    @media (max-width: 768px) {
+      margin: 0;
+    }
     &_item {
       float: left;
       width: 25%;
@@ -52,20 +55,22 @@
         width: 50%;
         min-height: 150px;
       }
-      @media (max-width: 768px) {
+      @media (max-width: 425px) {
         width: 100%;
       }
       .title-feature {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         padding-bottom: 20px;
         text-transform: uppercase;
         font-weight: 600;
       }
       p {
         line-height: 1.5;
+        padding-bottom: 8px;
       }
       a {
         color: white;
+        border-bottom: 1px solid white;
       }
     }
   }
