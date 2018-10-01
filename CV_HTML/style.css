@@ -1,0 +1,23 @@
+body {
+	padding: 0;
+	margin: 0;
+}
+main {
+	width: 210mm;
+	height: 297mm;
+	background: url(img/bg1.jpg);
+	margin: 0 auto;
+	border: 1px solid;
+	background-size: contain;
+    background-repeat: repeat;
+    position: relative;
+}
+.container {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	right: 20px;
+	bottom: 20px;
+	border: 1px solid white;
+	background: #fffffff0;
+}
