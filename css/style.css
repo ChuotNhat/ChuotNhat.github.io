@@ -32,7 +32,8 @@ html, body {
     width: 100; } }
 #intro {
   height: 673px;
-  position: relative; }
+  position: relative;
+  background-image: url("../img/ss4.png"); }
   #intro .typping-class {
     position: absolute;
     left: 50%;
