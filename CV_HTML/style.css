@@ -7,7 +7,6 @@ main {
 	height: 297mm;
 	background: url(img/bg18.jpg);
 	margin: 0 auto;
-	border: 1px solid;
 	background-size: contain;
   background-repeat: repeat;
   position: relative;
