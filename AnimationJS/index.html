@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test 1</title>
+	<style type="text/css">
+		#container {
+			width: 100px;
+			height: 100px;
+			background: red;
+			position: absolute;
+		}
+		body {
+			padding: 0;
+			margin: 0;
+		}
+	</style>
+</head>
+<body>
+	<div id="container"></div>
+	<script type="text/javascript">
+		var heightScreen = window.innerHeight,
+			widthScreen = window.innerWidth,
+			elem = document.getElementById('container'),
+			heightDiv = elem.offsetHeight,
+			widthDiv = elem.offsetWidth,
+			object = {},
+			array = [],
+			phantram = 0,
+			topDiv = 0,
+
+			lengthWidth = Math.floor(widthScreen/widthDiv - 1),
+			lengthWidthCopy = lengthWidth,
+			lengthHeight = Math.floor(heightScreen/heightDiv - 1),
+			countToDown = 0,
+			countUp = 1,
+			handleGo = setInterval(runToRight, 1000),
+			handleBack = '',
+			flag = true;
+
+		for (var i = 0; i <= lengthWidth; i++) {
+			object['phantram'] = i*100/lengthWidth;
+			object['leftDiv'] = i*heightDiv;
+			var objectCopy = Object.assign({}, object);
+			array.push(objectCopy);
+		}
+
+		function runToRight() {
+	    	elem.style.top = topDiv + 'px';
+	    	elem.style.left = array[countUp].leftDiv + 'px';
+			elem.style.background = randomColor();
+	    	countUp++;
+
+	    	if (countUp > lengthWidth ) {
+	    		clearInterval(handleGo);
+	    		downLine();
+	    		topDiv = parseInt(topDiv) + parseInt(heightDiv);
+	    		countUp = 1;
+	    	}
+		}
+
+		function downLine() {
+			setTimeout(function(){
+				countToDown++;
+		    	if (countToDown <= lengthHeight) {
+			    	elem.style.top = topDiv + 'px';
+			    	elem.style.background = randomColor();
+
+			    	if (flag)
+		    			handleBack = setInterval(runToLeft, 1000);
+			    	else
+			    		handleGo = setInterval(runToRight, 1000);
+		    	}
+
+		    	flag = !flag;
+
+			}, 1000);
+		}
+
+		function runToLeft() {	
+			if (true) {
+		    	elem.style.left = array[lengthWidthCopy].leftDiv - heightDiv + 'px';
+			    elem.style.background = randomColor();
+		    	lengthWidthCopy--;
+
+		    	if (lengthWidthCopy < 1) {
+		    		downLine();
+		    		clearInterval(handleBack);
+		    		
+		    		lengthWidthCopy = lengthWidth ;
+		    		topDiv = topDiv + heightDiv;
+		    	}
+
+			} else {
+				clearInterval(handleBack);
+			}	
+		}
+
+		function randomColor() {
+			return 'rgb('+Math.floor(Math.random()*255)+','+Math.floor(Math.random()*255)+','+Math.floor(Math.random()*255)+')';
+		}
+	</script>
+</body>
+</html>
