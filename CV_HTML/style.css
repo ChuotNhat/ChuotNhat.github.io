@@ -199,7 +199,7 @@ main {
   right: 40%;
 }
 .professional-skill .rate-react .result {
-  right: 60%;
+  right: 65%;
 }
 .professional-skill .rate-node .result {
   right: 80%;
@@ -211,16 +211,17 @@ main {
   right: 35%;
 }
 .professional-skill .rate-gimp .result {
-  right: 70%;
+  right: 80%;
 }
 .professional-skill .rate-gitlab .result {
-  right: 50%;
+  right: 55%;
 }
 .item-skill .content {
   padding-bottom: 3px;
 }
 .time {
   font-size: 14px;
+  text-transform: lowercase;
 }
 .infor-company {
   display: flex;
