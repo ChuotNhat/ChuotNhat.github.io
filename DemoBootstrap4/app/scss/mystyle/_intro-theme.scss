@@ -1,0 +1,46 @@
+.intro-theme {
+	background: url('../img/bg-intro.jpg');
+	height: 500px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin: auto;
+	padding-top: 100px;
+	
+	@media screen and (max-width: 767px){
+		padding-top: 50px;
+	}
+
+	.content {
+		color: $white;
+	}
+
+	.title-content {
+		font-size: 4rem;
+		line-height: 1.2;
+
+		@media screen and (max-width: 767px){
+			font-size: 3rem;
+		}
+
+		@media screen and (max-width: 540px){
+			font-size: 2rem;
+		}
+	}
+
+	.wrap-btn {
+		margin-top: 30px;
+	}
+
+	.animation-text {
+		color: $ruby;
+		font-weight: 600;
+	}
+
+	.typed-cursor {
+		color: $ruby;
+	}
+
+	.infor {
+		font-size: 1.4rem;
+	}
+}

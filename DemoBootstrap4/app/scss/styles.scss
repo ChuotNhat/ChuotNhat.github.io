@@ -1,0 +1,87 @@
+// import bootstrap
+
+@import "functions";
+@import "variables";
+@import "mixins";
+@import "root";
+@import "reboot";
+@import "type";
+@import "grid";
+@import "forms";
+@import "buttons";
+@import "transitions";
+@import "dropdown";
+@import "input-group";
+@import "custom-forms";
+@import "nav";
+@import "navbar";
+@import "card";
+@import "badge";
+@import "media";
+@import "close";
+@import "utilities";
+@import "print";
+
+// bootstrap reboot
+
+@import "functions";
+@import "variables";
+@import "mixins";
+@import "reboot";
+
+// bootstrap grid
+
+@at-root {
+	@-ms-viewport { width: device-width; } // stylelint-disable-line at-rule-no-vendor-prefix
+}
+
+html {
+	box-sizing: border-box;
+	-ms-overflow-style: scrollbar;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+@import "functions";
+@import "variables";
+
+@import "mixins/breakpoints";
+@import "mixins/grid-framework";
+@import "mixins/grid";
+
+@import "grid";
+@import "utilities/display";
+@import "utilities/flex";
+
+
+//   my styles
+@import 'mystyle/variable.scss';
+@import 'mystyle/common.scss';
+@import 'mystyle/collapse.scss';
+@import 'mystyle/floating.scss';
+@import 'mystyle/footer.scss';
+@import 'mystyle/header.scss';
+@import 'mystyle/intro-theme.scss';
+@import 'mystyle/grid-section.scss';
+@import 'mystyle/slidebar-form.scss';
+@import 'mystyle/slider.scss';
+@import 'mystyle/subscribe-newsletter.scss';
+@import 'mystyle/tabs.scss';
+@import 'mystyle/search.scss';
+
+@font-face {
+	font-family: 'FontAwesome';
+	src: url('fonts/fontawesome-webfont.eot');
+	src: url('fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+		url('fonts/fontawesome-webfont.woff') format('woff'),
+		url('fonts/fontawesome-webfont.woff2') format('woff2'),
+		url('fonts/fontawesome-webfont.ttf') format('truetype'),
+		url('fonts/fontawesome-webfont.svgz#FontAwesomeRegular') format('svg'),
+		url('fonts/fontawesome-webfont.svg#FontAwesomeRegular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}

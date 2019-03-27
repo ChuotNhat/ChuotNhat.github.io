@@ -1,0 +1,51 @@
+.collapse-section {
+	.card {
+		border: 0;
+	}
+	.card-header {
+		background: transparent;
+	}
+
+	.accordion-title {
+		font-size: 1.2rem;
+		font-weight: 600;
+		display: block;
+		width: 100%;
+		text-align: left;
+		border: 0 !important;
+		background-color: transparent;
+
+		text-overflow: ellipsis;
+		overflow: hidden;
+		white-space: nowrap;
+
+		&.btn:focus {
+			box-shadow: 0 0 0;
+			border: 0;
+		}
+	}
+
+	.bg-general {
+		padding: 5px 10px;
+	}
+
+	.bg-text-1 {
+		background-color: $ruby;
+	}
+
+	.bg-text-2 {
+		background-color: $seagreen;
+	}
+
+	.bg-text-3 {
+		background-color: $proyalblue;
+	}
+
+	.bg-text-4 {
+		background-color: $darkorange;
+	}
+
+	.bg-text-5 {
+		background-color: $darkgrayishblue;
+	}
+}

@@ -1,0 +1,18 @@
+.subscribe-newsletter {
+	.title-content {
+		padding-bottom: 40px;
+	}
+
+	input {
+		padding: 15px 20px;
+
+		&.form-control:focus {
+			box-shadow: 0 0 0;
+			border-color: $warningdark;
+		}
+	}
+
+	.btn-general {
+		padding: 10px 30px;
+	}
+}

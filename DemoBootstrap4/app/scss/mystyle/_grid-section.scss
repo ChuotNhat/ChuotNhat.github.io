@@ -1,0 +1,68 @@
+.grid-section {
+	.title-content {
+		font-size: 2rem;
+		line-height: 1.4;
+		padding-bottom: 50px;
+	}
+
+	.wrap-title {
+		padding: 0 0 50px 0;
+	}
+
+	.details {
+		.detail-item {
+			.bg {
+				opacity: .7;
+			}
+
+			&:nth-child(1) {
+				.bg {
+					background: $dangerred;
+				}
+				i {
+					color: $dangerdark
+				}
+			}
+
+			&:nth-child(2) {
+				.bg {
+					background: $warningorange;
+				}
+				i {
+					color: $warningdark
+				}
+			}
+
+			&:nth-child(3) {
+				.bg {
+					background: $inforblue;
+				}
+				i {
+					color: $infordark;
+				}
+			}
+		}
+
+		.icon {
+			
+			.bg {
+				height: 100px;
+				width: 100px;
+				border-radius: 50%;
+				margin: auto;
+			}
+			i {
+				padding-bottom: 20px;
+				position: absolute;
+				top: 71px;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+		}
+
+		.title {
+			font-weight: 500;
+			font-size: 1.5rem;
+		}
+	}
+}

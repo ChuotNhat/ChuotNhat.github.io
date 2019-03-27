@@ -1,0 +1,55 @@
+.tabs-section {
+	.nav {
+		justify-content: center;
+	}
+
+	.nav-tabs {
+		border-bottom: 1px dashed $cornflowerblue;
+
+		.nav-link {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			padding: 10px 50px;
+			color: $white;
+			text-transform: uppercase;
+			opacity: .7;
+
+			&.active,
+			&:hover {
+				border-color: currentColor currentColor $white;
+				box-shadow: 0 8px 17px 0 rgba(0,0,0,.2),0 6px 20px 0 rgba(0,0,0,.19);
+				opacity: 1;
+			}
+
+			i, span {
+				display: block;
+				width: 100%;
+				text-align: center;
+			}
+		}
+
+		.nav-item {
+			&:nth-child(1) {
+				.nav-link {
+					background: $dangerred;
+					border-bottom: 5px solid $dangerdark;
+				}
+			}
+
+			&:nth-child(2) {
+				.nav-link {
+					background: $warningorange;
+					border-bottom: 5px solid $warningdark;
+				}
+			}
+
+			&:nth-child(3) {
+				.nav-link {
+					background: $inforblue;
+					border-bottom: 5px solid $infordark;
+				}
+			}
+		}
+	}
+}
