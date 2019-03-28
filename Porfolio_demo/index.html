@@ -1,110 +1,112 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Porfolio</title>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <meta name="robots" content="index, follow">
-    <meta name="author" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no, shrink-to-fit=no">
-    <link rel="icon" href="favicon.png" type="image/x-icon" sizes="16x16">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/standardize.css">
-  </head>
-  <body>
-    <main>
-      <div class="btn-menu" data-btn-menu></div>
-      <div class="navbar-nav" data-menu>
-        <div class="navbar_item">
-          <div class="content">
-            <div class="icon">
-              <img src="img/idea.png" alt="">
-            </div>
-            <div class="title">Abstract  </div>
-          </div>
-        </div>
-        <div class="navbar_item">
-          <div class="content">
-              <div class="icon">
-                <img src="img/heart.png" alt="">
-              </div>
-              <div class="title">Watercolor </div>
-            </div>
-        </div>
-        <div class="navbar_item">
-          <div class="content">
-              <div class="icon">
-                <img src="img/exchange.png" alt="">
-              </div>
-              <div class="title">Summer </div>
-            </div>
-        </div>
-        <div class="navbar_item">
-          <div class="content">
-            <div class="icon">
-              <img src="img/management.png" alt="">
-            </div>
-            <div class="title">Background </div>
-            </div>
-        </div>
-      </div>
-      
-      <div class="intro">
-        <div class="intro-item intro-1">
-          <div class="item">i</div>
-          <div class="item">m</div>
-          <div class="item">h</div>
-          <div class="item">u</div>
-          <div class="item">o</div>
-          <div class="item">n</div>
-          <div class="item">g</div>
-        </div>
 
-        <div class="intro-item intro-2">
-          <div class="item">i</div>
-          <div class="item">m</div>
-          <div class="item">f</div>
-          <div class="item">r</div>
-          <div class="item">o</div>
-          <div class="item">n</div>
-          <div class="item">t</div>
-        </div>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Porfolio</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="robots" content="index, follow">
+	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no, shrink-to-fit=no">
+	<link rel="icon" href="favicon.png" type="image/x-icon" sizes="16x16">
+	<link rel="stylesheet" href="style.min.css">
 
-        <div class="intro-item intro-3">
-          <div class="item">e</div>
-          <div class="item">n</div>
-          <div class="item">d</div>
-        </div>
+</head>
 
-        <div class="intro-item intro-4">
-          <div class="item">d</div>
-          <div class="item">e</div>
-          <div class="item">v</div>
-          <div class="item">e</div>
-          <div class="item">l</div>
-          <div class="item">o</div>
-          <div class="item">p</div>
-          <div class="item">e</div>
-          <div class="item">r</div>
-        </div>
-        <div class="intro-item intro-5">
-            <div class="item">i</div>
-            <div class="item">m</div>
-            <div class="item">d</div>
-            <div class="item">e</div>
-            <div class="item">s</div>
-            <div class="item">i</div>
-            <div class="item">n</div>
-            <div class="item">g</div>
-            <div class="item">n</div>
-            <div class="item">e</div>
-            <div class="item">r</div>
-          </div>
-      </div>
-    </main>
-    <script src="js/jquery-3.3.1.js"></script>
-    <script src="js/script.js"></script>
-  </body>
+<body>
+	<main>
+		<div class="btn-menu" id="btn-open-menu" onClick="openMenu()"></div>
+		<div class="navbar-nav" id="wrapper-menu">
+			<div class="navbar_item">
+				<div class="content">
+					<div class="icon">
+						<img src="img/idea.png" alt="">
+					</div>
+					<div class="title">Abstract </div>
+				</div>
+			</div>
+			<div class="navbar_item">
+				<div class="content">
+					<div class="icon">
+						<img src="img/heart.png" alt="">
+					</div>
+					<div class="title">Watercolor </div>
+				</div>
+			</div>
+			<div class="navbar_item">
+				<div class="content">
+					<div class="icon">
+						<img src="img/exchange.png" alt="">
+					</div>
+					<div class="title">Summer </div>
+				</div>
+			</div>
+			<div class="navbar_item">
+				<div class="content">
+					<div class="icon">
+						<img src="img/management.png" alt="">
+					</div>
+					<div class="title">Background </div>
+				</div>
+			</div>
+		</div>
+
+		<div class="intro">
+			<div class="intro-item intro-1">
+				<div class="item">i</div>
+				<div class="item">m</div>
+				<div class="item">h</div>
+				<div class="item">u</div>
+				<div class="item">o</div>
+				<div class="item">n</div>
+				<div class="item">g</div>
+			</div>
+
+			<div class="intro-item intro-2">
+				<div class="item">i</div>
+				<div class="item">m</div>
+				<div class="item">f</div>
+				<div class="item">r</div>
+				<div class="item">o</div>
+				<div class="item">n</div>
+				<div class="item">t</div>
+			</div>
+
+			<div class="intro-item intro-3">
+				<div class="item">e</div>
+				<div class="item">n</div>
+				<div class="item">d</div>
+			</div>
+
+			<div class="intro-item intro-4">
+				<div class="item">d</div>
+				<div class="item">e</div>
+				<div class="item">v</div>
+				<div class="item">e</div>
+				<div class="item">l</div>
+				<div class="item">o</div>
+				<div class="item">p</div>
+				<div class="item">e</div>
+				<div class="item">r</div>
+			</div>
+			<div class="intro-item intro-5">
+				<div class="item">i</div>
+				<div class="item">m</div>
+				<div class="item">d</div>
+				<div class="item">e</div>
+				<div class="item">s</div>
+				<div class="item">i</div>
+				<div class="item">n</div>
+				<div class="item">g</div>
+				<div class="item">n</div>
+				<div class="item">e</div>
+				<div class="item">r</div>
+			</div>
+		</div>
+	</main>
+	<script src="app.min.js"></script>
+</body>
+
 </html>

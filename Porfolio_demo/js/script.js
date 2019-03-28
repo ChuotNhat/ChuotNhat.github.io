@@ -1,8 +1,5 @@
-$(document).ready(function() {
-  var btnMenu = $('[data-btn-menu]'),
-      menuContent = $('[data-menu]');
 
-  btnMenu.on('click', function() {
-    menuContent.slideToggle();
-  });
-});
+function openMenu() {
+	var element = document.getElementById("wrapper-menu");
+	element.classList.toggle("display-menu");
+}
