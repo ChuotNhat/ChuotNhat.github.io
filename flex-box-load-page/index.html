@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style-type: none;
+      }
+      a {
+        color: black;
+        text-decoration: none;
+      }
+
+      header {
+        background: #3097d1;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px;
+        align-items: center;
+      }
+
+      header input {
+        height: 30px;
+        padding-left: 10px;
+        border: 0;
+        margin-right: 20px;
+      }
+
+      header img {
+        height: 30px;
+      }
+      header .nav-right {
+        display: flex;
+        align-items: center;
+      }
+
+      header ul {
+        display: flex;
+      }
+
+      header ul li a {
+        color: white;
+        text-decoration: none;
+        padding: 10px;
+      }
+
+      .container {
+        display: flex;
+        width: 85%;
+        margin: 50px auto auto;
+        justify-content: space-between;
+      }
+      .container .item {
+        padding: 10px;
+      }
+      .wrapper {
+        border: 1px solid black;
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+      .about {
+        flex: 0 0 25%;
+        text-align: center;
+      }
+      .about .bg {
+        width: 100%;
+      }
+      .about .bg img {
+        width: 100%;
+      }
+      .about .avatar {
+        width: 70px;
+        margin-top: -35px;
+      }
+      .about .infor {
+        text-align: center;
+        padding-top: 20px;
+      }
+      .about .infor li {
+        display: inline-block;
+        padding: 5px;
+      }
+      .article {
+        flex: 0 0 50%;
+      }
+      .article h6 {
+        font-size: 16px;
+      }
+      .article .avatar {
+        width: 40px;
+        padding-right: 10px;
+      }
+      .article .post {
+        display: flex;
+        align-items: flex-start;
+        padding: 20px 10px;
+      }
+      .article .title {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        padding-bottom: 15px;
+      }
+      .article .input-group {
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+      }
+      .article .input-group input, 
+      .article .input-group button {
+        height: 30px;
+      }
+      .article .input-group input {
+        padding-left: 15px;
+        flex: 0 0 75%;
+      }
+      .article .input-group button {
+        flex: 0 0 20%;
+        height: 34px;
+        background: #3097d1;
+        color: white;
+        border: 0;
+      }
+      .another {
+        flex: 0 0 25%;
+      }
+      .another button {
+        padding: 10px 20px;
+        background: #3097d1;
+        color: white;
+        margin: 20px 0;
+        border: 0;
+      }
+      .another a {
+        color: #3097d1;
+      }
+      .another .title {
+        padding-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="nav-left">
+        <ul class="navbar-nav ahq">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">Messages</a></li>
+          <li><a href="#">Docs</a></li>
+          <li><a href="#">Notifications</a></li>
+          <li><a href="#">Logout</a></li>
+        </ul>
+      </div>
+      <div class="nav-right">
+        <input type="text" placeholder="Search" id="search" name="search" />
+        <img src="https://lbb.in/static/images/author-avatar.png" tilte="avatar"/>
+      </div>
+    </header>
+    <div class="container">
+      <div class="about item">
+        <div class="wrapper">
+          <div class="bg"><img src="https://www.pollux.fun/backdrops/5zhr3HWlQB4OmyCBFyHbFuoIhxrZY6l6.png"/></div>
+          <div>
+            <div class="wrap-avatar">
+              <img
+                class="avatar"
+                src="https://lbb.in/static/images/author-avatar.png"
+              />
+            </div>
+            <h3 class="">Dave Gamache</h3>
+            <p class="">
+              I wish i was a little bit taller, wish i was a baller, wish i had
+              a girl…&nbsp;also.
+            </p>
+            <ul class="infor">
+              <li><a href="#">Friends<h5>12M</h5></a></li>
+              <li><a href="#">Enemies<h5>1</h5></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="article item">
+        <ul class="">
+          <li class="wrapper">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Message" />
+              <button type="button" class="">Send</button>
+            </div>
+          </li>
+
+          <li class="post wrapper">
+            <img class="avatar" src="https://lbb.in/static/images/author-avatar.png" />
+            <div>
+              <div class="title">
+                <small>4 min</small>
+                <h6>Dave Gamache</h6>
+              </div>
+              <p>
+                Aenean lacinia bibendum nulla sed consectetur. Vestibulum id
+                ligula porta felis euismod semper. Morbi leo risus, porta ac
+                consectetur ac, vestibulum at eros. Cras justo odio, dapibus ac
+                facilisis in, egestas eget quam. Vestibulum id ligula porta
+                felis euismod semper. Cum sociis natoque penatibus et magnis dis
+                parturient montes, nascetur ridiculus mus.
+              </p>
+              <div>
+                <div style="display: inline-block; margin-bottom: 10px; margin-right: 10px; vertical-align: bottom;">
+                  <img
+                    src="https://www.pollux.fun/backdrops/5zhr3HWlQB4OmyCBFyHbFuoIhxrZY6l6.png"
+                    style="width: 240px; height: 120px;"
+                  />
+                </div>
+                <div style="display: inline-block; margin-bottom: 10px; margin-right: 0px; vertical-align: bottom;">
+                  <img
+                    src="https://www.pollux.fun/backdrops/5zhr3HWlQB4OmyCBFyHbFuoIhxrZY6l6.png"
+                    style="width: 240px; height: 120px;"
+                  />
+                </div>
+                <div style="display: inline-block; margin-bottom: 10px; margin-right: 10px; vertical-align: bottom;">
+                  <img
+                    src="https://www.pollux.fun/backdrops/5zhr3HWlQB4OmyCBFyHbFuoIhxrZY6l6.png"
+                    style="width: 240px; height: 120px;"
+                  />
+                </div>
+                <div style="display: inline-block; margin-bottom: 10px; margin-right: 0px; vertical-align: bottom;">
+                  <img
+                    src="https://www.pollux.fun/backdrops/5zhr3HWlQB4OmyCBFyHbFuoIhxrZY6l6.png"
+                    style="width: 240px; height: 120px;"
+                  />
+                </div>
+              </div>
+
+              <ul>
+                <li class="post">
+                  <img class="avatar" src="https://lbb.in/static/images/author-avatar.png" />
+                  <div>
+                    <strong>Jacon Thornton: </strong>
+                    Donec id elit non mi porta gravida at eget metus. Vivamus
+                    sagittis lacus vel augue laoreet rutrum faucibus dolor
+                    auctor. Donec ullamcorper nulla non metus auctor fringilla.
+                    Praesent commodo cursus magna, vel scelerisque nisl
+                    consectetur et. Sed posuere consectetur est at lobortis.
+                  </div>
+                </li>
+                <li class="post">
+                  <img class="avatar" src="https://lbb.in/static/images/author-avatar.png" />
+                  <div>
+                    <strong>Mark Otto: </strong>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Fusce dapibus, tellus ac cursus commodo, tortor mauris
+                    condimentum nibh, ut fermentum massa justo sit amet risus.
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="post wrapper">
+            <img class="avatar" src="https://lbb.in/static/images/author-avatar.png" />
+            <div>
+              <div>
+                <div class="title">
+                  <small>12 min</small>
+                  <h6>Jacob Thornton</h6>
+                </div>
+                <p>
+                  Donec id elit non mi porta gravida at eget metus. Integer
+                  posuere erat a ante venenatis dapibus posuere velit aliquet.
+                  Cum sociis natoque penatibus et magnis dis parturient montes,
+                  nascetur ridiculus mus. Morbi leo risus, porta ac consectetur
+                  ac, vestibulum at eros. Lorem ipsum dolor sit amet,
+                  consectetur adipiscing elit.
+                </p>
+              </div>
+            </div>
+          </li>
+
+          <li class="post wrapper">
+            <img class="avatar" src="https://lbb.in/static/images/author-avatar.png" />
+            <div>
+              <div class="title">
+                <small>34 min</small>
+                <h6>Mark Otto</h6>
+              </div>
+
+              <p>
+                Donec ullamcorper nulla non metus auctor fringilla. Vestibulum
+                id ligula porta felis euismod semper. Aenean eu leo quam.
+                Pellentesque ornare sem lacinia quam venenatis vestibulum. Etiam
+                porta sem malesuada magna mollis euismod. Donec sed odio dui.
+              </p>
+
+              <div data-grid="images">
+                <img
+                  style="display: inline-block; width: 466px; height: 300px; margin-bottom: 10px; margin-right: 0px; vertical-align: bottom;"
+                  src="https://www.pollux.fun/backdrops/5zhr3HWlQB4OmyCBFyHbFuoIhxrZY6l6.png"
+                />
+              </div>
+
+              <ul>
+                <li class="post">
+                  <img class="avatar" src="https://lbb.in/static/images/author-avatar.png" />
+                  <div>
+                    <strong>Dave Gamache: </strong>
+                    Donec id elit non mi porta gravida at eget metus. Vivamus
+                    sagittis lacus vel augue laoreet rutrum faucibus dolor
+                    auctor. Donec ullamcorper nulla non metus auctor fringilla.
+                    Praesent commodo cursus magna, vel scelerisque nisl
+                    consectetur et. Sed posuere consectetur est at lobortis.
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="another item">
+        <div class="wrapper">
+          <div>
+            <h4 class="title">Sponsored</h4>
+            <div><img src="https://www.pollux.fun/backdrops/5zhr3HWlQB4OmyCBFyHbFuoIhxrZY6l6.png" style="width: 264px; height: 140px; margin-bottom: 10px; margin-right: 0px; display: inline-block; vertical-align: bottom;"></div>
+            <p><strong>It might be time to visit Iceland.</strong> Iceland is so chill, and everything looks cool here. Also, we heard the people are pretty nice. What are you waiting for?</p>
+            <button>Buy a ticket</button>
+          </div>
+        </div>
+        <div class="wrapper">
+            <div>
+                <div>
+                  © 2019 HuongTran
+                  <a href="#">About</a>
+                  <a href="#">Help</a>
+                  <a href="#">Terms</a>
+                  <a href="#">Privacy</a>
+                  <a href="#">Cookies</a>
+                  <a href="#">Ads </a>
+                  <a href="#">Info</a>
+                  <a href="#">Brand</a>
+                  <a href="#">Blog</a>
+                  <a href="#">Status</a>
+                  <a href="#">Apps</a>
+                  <a href="#">Jobs</a>
+                  <a href="#">Advertise</a>
+                </div>
+              </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
