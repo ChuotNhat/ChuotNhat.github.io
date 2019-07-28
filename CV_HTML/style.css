@@ -21,10 +21,9 @@ main {
 	background: #ffffffd6;
 }
 .header {
-  height: 200px;
-  padding: 20px;
+  height: 160px;
+  padding: 30px 20px 20px;
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: space-between;
 }
@@ -33,23 +32,21 @@ main {
   position: relative;
 }
 .header_content .img {
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  bottom: 5px;
-  right: 5px;
+  background: #1C2331;
   border-radius: 100%;
-  background: white;
+  width: 160px;
+  height: 160px;
+  box-shadow: 0 8px 17px 0 rgba(0,0,0,.2),0 6px 20px 0 rgba(0,0,0,.19);
 }
 .header_content .img img {
-  width: 90%;
-  height: 90%;
+  width: 140px;
+  height: 140px;
   border-radius: 100%;
-  position: absolute;
-  top: 5%;
-  left: 5%;
-  bottom: 5%;
-  right: 5%;
+  padding: 10px;
+}
+.header_content .git {
+  padding-top: 22px;
+  color: #1C2331;
 }
 .header_content .title,
 .skill .title,
@@ -59,17 +56,15 @@ main {
 .education .title {
   text-transform: uppercase;
   font-size: 20px;
-  color: #33b5e5;
+  color: #1C2331;
   padding-bottom: 10px;
   font-family: 'PT Sans', sans-serif;
   font-weight: bold;
 }
 .header_content-left{
-  width: 23%;
+  width: 160px;
+  height: 160px;
   border-radius: 100%;
-  background: #33b5e5;
-  padding: 22px;
-  height: 84%;
 }
 .header_content-right {
   width: 77%;
@@ -80,7 +75,8 @@ main {
 }
 .contact {
   padding: 5px 10px;
-  background: #33b5e5;
+  margin: 0 20px 10px 20px;
+  background: #1C2331;
   margin-top: 5px;
   color: white;
   display: flex;
@@ -90,8 +86,13 @@ main {
   font-weight: bold;
   font-family: 'PT Sans', sans-serif;
 }
+.contact .gitbub img {
+  width: 15px;
+}
 .contact .phone img,
 .contact .phone span,
+.contact .github img,
+.contact .github span,
 .contact .gmail img,
 .contact .gmail span,
 .contact .address img,
@@ -100,6 +101,7 @@ main {
   vertical-align: middle;
 }
 .contact .phone img,
+.contact .github img,
 .contact .gmail img,
 .contact .address img {
   padding-right: 2px;
@@ -131,7 +133,7 @@ main {
   box-sizing: border-box;
 }
 .box-main_left {
-  border-right: 2px solid #33b5e5;
+  border-right: 2px solid #1C2331;
   padding-right: 20px;
   position: relative;
 }
@@ -142,7 +144,7 @@ main {
   position: absolute;
   top: 0;
   right: -6px;
-  background: #33b5e5;
+  background: #1C2331;
   transform: rotate(45deg);
 }
 .box-main_left:after {
@@ -152,7 +154,7 @@ main {
   position: absolute;
   bottom: 0;
   right: -6px;
-  background: #33b5e5;
+  background: #1C2331;
   transform: rotate(45deg);
 }
 .box-main_right {
@@ -167,18 +169,21 @@ main {
 .professional-skill .title-1,
 .experience .title-1 {
   font-size: 14px;
-  color: #33b5e5;
+  color: #1C2331;
   font-weight: bold;
   padding-bottom: 10px;
 }
 .professional-skill > section {
   padding-bottom: 15px;
 }
+.professional-skill > section:last-child {
+  padding-bottom: 0;
+}
 .professional-skill .rate {
   height: 12px;
   width: 40%;
   position: relative;
-  border: 1px solid #33b5e5;
+  border: 1px solid #1C2331;
   text-align: right;
 }
 .professional-skill .rate .result {
@@ -187,7 +192,7 @@ main {
   left: 0;
   bottom: 0;
   right: 20%;
-  background-color: #33b5e5;
+  background-color: #1C2331;
 }
 .professional-skill .rate-css .result {
   right: 25%;
@@ -220,13 +225,14 @@ main {
   padding-bottom: 3px;
 }
 .time {
-  font-size: 14px;
+  font-size: 12px;
   text-transform: lowercase;
+  font-family: 'Lato', sans-serif;
 }
 .infor-company {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
   flex-direction: row;
 }
 .uppercase {
@@ -235,5 +241,5 @@ main {
   font-weight: bold;
 }
 .link {
-  color: #33b5e5;
+  color: #1C2331;
 }
