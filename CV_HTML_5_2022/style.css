@@ -65,6 +65,7 @@ main {
     left: 50%;
     transform: translateX(-50%);
     box-sizing: border-box;
+
     border: 5px solid;
     border-width: 5px;
     border-image-slice: 1;
@@ -135,7 +136,7 @@ main {
 
 .time {
     font-size: 13px;
-    text-transform: lowercase;
+    text-transform: initial;
     font-family: 'Lato', sans-serif;
 }
 
